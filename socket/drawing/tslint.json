@@ -1,0 +1,7 @@
+{
+  "extends": "tslint-config-flagwind",
+  "rules":
+  {
+      "array-type": false
+  }
+}

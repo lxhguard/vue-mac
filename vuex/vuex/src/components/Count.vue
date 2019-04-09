@@ -1,0 +1,65 @@
+<template>
+    <div>
+        <h2>{{msg}}</h2><hr>
+        <!-- <h3>{{$store.state.count}} - {{count}}</h3> -->
+        <h3>{{$store.state.a.count}}</h3>
+        <h3>{{count}}</h3>
+        <p>
+            <button @click="$store.commit('add',10)">+</button>
+            <button @click="reduce">-</button>
+        </p>
+        <p>
+            <button @click="addAction">+</button>
+            <button @click="reduceAction">-</button>
+        </p>
+    </div>
+</template>
+
+
+<script>
+import store from '../../vuex/store'
+import {mapState,mapMutations,mapGetters, mapActions} from 'vuex'
+
+export default {
+    data(){
+        return {
+            msg:'Hello Vuex'
+        }
+    },
+    //给count赋值的三种方法：computed,mapState,数组
+
+
+    // computed:{
+    //     count(){
+    //         return this.$store.state.count;
+    //     }
+    // },
+
+    // computed:mapState({
+    //     count:state => state.count,
+    // }),
+
+    computed:{
+        //...mapState(['count']),
+        // count(){
+        //     return this.$store.getters.count
+        // }
+        //简写如下
+        //...mapGetters(['count'])
+
+
+        //下面是module简化名字的
+        count(){
+            return this.$store.state.a.count;
+        }
+    },
+
+    methods:{
+        ...mapMutations(['add','reduce']),
+        ...mapActions(['addAction','reduceAction'])
+    },
+
+
+    store
+}
+</script>

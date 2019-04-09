@@ -1,0 +1,684 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": "5c73d9c2ab86b86ddf6b2b4a",
+            "author_id": "51f0f267f4963ade0e08f503",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>更灵活的机动、更快的效率、更高的产能\nServerless - 解放的不仅仅是生产力，更是一种全新的思维方式。</p>\n<p>百姓网 Hax、上线了郭达峰、ThoughtWorks 陈欢、阿里云杜万、淘宝冰森等优秀分享者，\n期待与你一起进入嗨翻 server 的新场景。</p>\n<p><img src=\"//static.cnodejs.org/FlbUfz7IHVgS4DwmjSrXKiL9fMRl\" alt=\"image.png\">\n<img src=\"//static.cnodejs.org/FlDAitTvYWpWsudI8VGjfjGGXYRr\" alt=\"image.png\"></p>\n<p>时间：03 月 16 日周六\n地点：上海证大五道口广场</p>\n<p>报名链接：<a href=\"https://survey.alibaba.com/apps/zhiliao/tZc2WjLe2\">https://survey.alibaba.com/apps/zhiliao/tZc2WjLe2</a>\n活动主页：<a href=\"https://taobaofed.github.io/nodejs-club/\">https://taobaofed.github.io/nodejs-club/</a></p>\n</div>",
+            "title": "Node 地下铁第八期「上海站」线下沙龙邀约 - Let's Go Serverless!",
+            "last_reply_at": "2019-03-05T01:58:58.515Z",
+            "good": false,
+            "top": true,
+            "reply_count": 14,
+            "visit_count": 1636,
+            "create_at": "2019-02-25T12:04:18.826Z",
+            "author": {
+                "loginname": "lellansin",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/2081487?v=4&s=120"
+            }
+        },
+        {
+            "id": "5bd4772a14e994202cd5bdb7",
+            "author_id": "504c28a2e2b845157708cb61",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>2018年10月27日晚上，突然收到服务器不能访问的告警通知，拜托了狼叔 <a href=\"/user/i5ting\">@i5ting</a> 帮忙看看，结果登不上也ping不通。\n后来收到短信，发现是被ucloud封了，短信内容如下：</p>\n<blockquote>\n<p>【UCloud】尊敬的UCloud用户，您的IP：123.59.77.142  存在URL ：<a href=\"https://cnodejs.org/topic/57239bce5a26c4a841ecbf01\">https://cnodejs.org/topic/57239bce5a26c4a841ecbf01</a> （详细信息请查看邮箱）包含违禁内容（包括但不限于翻墙等），违反了国家有关法律法规。目前依主管单位要求，对您的IP予以封停，请您尽快处理违规内容。待处理完成后请联系技术支持重新开启业务。[4000188113]</p>\n</blockquote>\n<p>然后联系了ucloud的客服，一下就打通了，对方态度挺好处理问题也快。ucloud说是运营商那边封的，不是他们的检测机制。所以需要联系运营商解决。\n考虑到各位亲爱的网友们的行为我无法控制，那么一直跟越来越严格的审查系统对抗只会让自己疲惫，所以我就站点迁到国外。来到了aws jp。</p>\n<p>我大致测了测，电信和移动的访问速度非常快，100ms以内，联通会慢一点，400ms以内吧。</p>\n<p>建议翻墙访问。</p>\n</div>",
+            "title": "服务器迁移至 aws 日本机房",
+            "last_reply_at": "2019-02-25T00:42:08.396Z",
+            "good": false,
+            "top": true,
+            "reply_count": 149,
+            "visit_count": 16075,
+            "create_at": "2018-10-27T14:33:14.694Z",
+            "author": {
+                "loginname": "alsotang",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/1147375?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7e6e9090c14711cc8ca95f",
+            "author_id": "5c7953365b8cb21491ca510f",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>data(){}</p>\n</div>",
+            "title": "vue中data怎样使用??",
+            "last_reply_at": "2019-03-05T12:41:52.580Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 22,
+            "create_at": "2019-03-05T12:41:52.580Z",
+            "author": {
+                "loginname": "qiuchenlu123",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/48122764?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7e617290c14711cc8ca939",
+            "author_id": "58d140302c8bf2a836456213",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>使用<a href=\"https://www.npmjs.com/package/redis\">redis</a>模块</p>\n<pre class=\"prettyprint language-javascript\"><code>const Promise = require(&quot;bluebird&quot;);\nconst redis = require(&quot;redis&quot;);\n    \nPromise.promisifyAll(redis.RedisClient.prototype);\nPromise.promisifyAll(redis.Multi.prototype);\n\nvar RedisClient = redis.createClient(&quot;192.168.59.101&quot;, 6379);\n\nRedisClient.on(&quot;connect&quot;, () =&gt; {\n    logger.info(&quot;connect to redis success&quot;);\n});\n\nRedisClient.on(&quot;error&quot;, err =&gt; {\n    console.error(err);\n});\n</code></pre><p>ECONNRESET每隔2个小时发生一次：</p>\n<pre class=\"prettyprint language-json\"><code>{\n    &quot;syscall&quot;: &quot;read&quot;,\n    &quot;code&quot;: &quot;ECONNRESET&quot;,\n    &quot;errno&quot;: &quot;ECONNRESET&quot;\n}\n</code></pre><p>这个问题似乎和<a href=\"http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/usingkeepalive.html\">TCP keepalive</a>有关，因为tcp_keepalive_time是7200秒，刚好是2个小时。。</p>\n<pre class=\"prettyprint language-bash\"><code>cat &#x2F;proc&#x2F;sys&#x2F;net&#x2F;ipv4&#x2F;tcp_keepalive_time\n7200\n</code></pre><p>Github上看到有遇到类似情况的，但是木有解决方案，大家知道这是什么原因么</p>\n</div>",
+            "title": "redis连接每隔2个小时报错ECONNRESET",
+            "last_reply_at": "2019-03-05T11:45:54.376Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 35,
+            "create_at": "2019-03-05T11:45:54.376Z",
+            "author": {
+                "loginname": "Fundebug",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/26496557?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7e361590c14711cc8ca842",
+            "author_id": "511350f6df9e9fcc58856443",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><h1>用 Vue 建立一个简单的 electron 桌面应用</h1>\n<h2>1. electron简介</h2>\n<h2>2. 工具介绍</h2>\n<h2>3. 实践效果，步骤</h2>\n<p>1）一个简单的 Electron 桌面应用都是冲 Hello World！ 开始的</p>\n<p><img src=\"//static.cnodejs.org/FkOo9B0rV9WHPe4h6Cb39CpqPyvy\" alt=\"ele1.png\"></p>\n<p>以上是使用 electron-vue 超级迅速制作出来的 electron 桌面应用。</p>\n<p>2）安装的组件</p>\n<p><code>vue init simulatedgreg/electron-vue white-electron-first</code></p>\n<p><img src=\"//static.cnodejs.org/FtUglYJ0X6cJIXNi6m0RbtMXxoeG\" alt=\"ele2.png\"></p>\n<p>3）build tool choice ？</p>\n<p>构建工具的选择，比较先进的是electron-builder</p>\n<p>实际上调试，开发可以直接选择 electron-builder，它支持热更新，像目前大部分在使用的 vue-cli 构建出来的项目一样保存即更新。</p>\n<p>如果是简单打包应用就直接选择 electron-packager 就好了，功能比较简单。</p>\n<p>参考链接：<a href=\"https://electron.org.cn/vue/building_your_app.html\">https://electron.org.cn/vue/building_your_app.html</a></p>\n<p><img src=\"//static.cnodejs.org/FpqfeNPROW-KcM0Cp9Op-SxRS0FN\" alt=\"ele3.png\"></p>\n<ol>\n<li>下一步</li>\n</ol>\n<pre class=\"prettyprint\"><code>&gt; npm i  &#x2F;&#x2F; 装包\n&gt; npm run dev  &#x2F;&#x2F; 测试环境运行\n</code></pre><p>就可以有一个初步的Electron桌面应用了</p>\n<h2>4. 如何将网站只做成 ELectron 应用？</h2>\n<p>1）网站页面</p>\n<p><img src=\"//static.cnodejs.org/FthI0NaZFuhz7Q_kRdlX3LsD8-Q7\" alt=\"ele4.png\"></p>\n<p>to 桌面应用</p>\n<p><img src=\"//static.cnodejs.org/Fj7BOib2mO-ZVr-Ad8MQVRiCAabx\" alt=\"ele5.png\"></p>\n<p>2）熟悉 node 的朋友都知道，启动一个 node 程序，通常就是 <code>node app.js</code> 之类的</p>\n<p>把这个 Node 应用转换成一个 Electron 应用也是非常简单的，我们只不过是把 <code>node</code> 运行时替换成了 <code>electron</code>运行时。<br>\npackage.json如下</p>\n<pre class=\"prettyprint\"><code>json\n{\n    &quot;script&quot;: {\n        &quot;electron&quot;: &quot;electron build&#x2F;electron.js&quot;,\n    }\n}\n</code></pre><p>Electron.js (一般启动项目写在main.js，具体看项目) 这个文件应该怎样写呢，这种基本都是参考成熟项目的，一般简单的如：</p>\n<pre class=\"prettyprint language-\"><code>js\n&#x2F;&#x2F; electron.js&quot;\nconst {app, BrowserWindow} = require(&#x27;electron&#x27;)\n  \n  &#x2F;&#x2F; Keep a global reference of the window object, if you don&#x27;t, the window will\n  &#x2F;&#x2F; be closed automatically when the JavaScript object is garbage collected.\n  let win\n  \n  function createWindow () {\n    &#x2F;&#x2F; 创建浏览器窗口。\n    win = new BrowserWindow({width: 800, height: 600})\n  \n    &#x2F;&#x2F; 然后加载应用的 index.html。\n    win.loadFile(&#x27;index.html&#x27;)\n  \n    &#x2F;&#x2F; 打开开发者工具\n    win.webContents.openDevTools()\n  \n    &#x2F;&#x2F; 当 window 被关闭，这个事件会被触发。\n    win.on(&#x27;closed&#x27;, () =&gt; {\n      &#x2F;&#x2F; 取消引用 window 对象，如果你的应用支持多窗口的话，\n      &#x2F;&#x2F; 通常会把多个 window 对象存放在一个数组里面，\n      &#x2F;&#x2F; 与此同时，你应该删除相应的元素。\n      win = null\n    })\n  }\n  \n  &#x2F;&#x2F; Electron 会在初始化后并准备\n  &#x2F;&#x2F; 创建浏览器窗口时，调用这个函数。\n  &#x2F;&#x2F; 部分 API 在 ready 事件触发后才能使用。\n  app.on(&#x27;ready&#x27;, createWindow)\n  \n  &#x2F;&#x2F; 当全部窗口关闭时退出。\n  app.on(&#x27;window-all-closed&#x27;, () =&gt; {\n    &#x2F;&#x2F; 在 macOS 上，除非用户用 Cmd + Q 确定地退出，\n    &#x2F;&#x2F; 否则绝大部分应用及其菜单栏会保持激活。\n    if (process.platform !== &#x27;darwin&#x27;) {\n      app.quit()\n    }\n  })\n  \n  app.on(&#x27;activate&#x27;, () =&gt; {\n    &#x2F;&#x2F; 在macOS上，当单击dock图标并且没有其他窗口打开时，\n    &#x2F;&#x2F; 通常在应用程序中重新创建一个窗口。\n    if (win === null) {\n      createWindow()\n    }\n  })\n  \n  &#x2F;&#x2F; 在这个文件中，你可以续写应用剩下主进程代码。\n  &#x2F;&#x2F; 也可以拆分成几个文件，然后用 require 导入。\n\n</code></pre><p>上文代码中有一段<code>win.loadFile('index.html')</code>的代码，意味着你的入口页面就是 index.html, 就像我们用electron-vue 模板启动的 hello world 一样。</p>\n<ol>\n<li>我们的 view 应用实际上就是一个 SPA 的页面，打包出来后也会有这个入口index.html 文件。</li>\n</ol>\n<p>于是 <code>npm run build</code> 先 build 出 dist 文件后，electron.js 的 index.html 替换成 dist 目录下的 html 文件之后，出现以下问题：打包出来的 css、js 文件访问不到了。</p>\n<p><img src=\"//static.cnodejs.org/Fvv75qbimGbqMJdt2SrDNoqnpRaC\" alt=\"ele6.png\"></p>\n<p>据此文档说是可以解决的 <a href=\"https://blog.csdn.net/m0_37604745/article/details/79303342\">https://blog.csdn.net/m0_37604745/article/details/79303342</a></p>\n<p>应该是应用版本不同，我们项目用的 webpack 找不到以上配置，于是直接改了 index.html 里面的 css，js 引用路径。</p>\n<p><img src=\"//static.cnodejs.org/FtUl9glSyGLUR5CACf1jfkSPAm7h\" alt=\"ele7.png\"><br>\n由于我们服务加载前必须先访问登陆系统，前端项目在没有配 ha 的情况下，单独的运行个静态前端项目是不行的呢。<br>\n然而，还是做到了。<br>\n实际也比较简单：直接把这段代码改成</p>\n<pre class=\"prettyprint language-\"><code>javascript\n&#x2F;&#x2F; 然后加载应用的 index.html\nwin.loadFile(&#x27;index.html&#x27;)  \n\n\n&#x2F;&#x2F; to 本地服务的地址就好了\n\nwin.loadUrl(&#x27;http:&#x2F;&#x2F;localhost:4000&#x27;)  \n\n</code></pre><p>目前这是最简单的打包一个已有应用成 electron 应该的方法。（笑）</p>\n<hr>\n<p><em>参考资料：</em></p>\n<p><em><a href=\"https://www.qcode.in/convert-vue-js-app-native-desktop-app-using-electron/\">https://www.qcode.in/convert-vue-js-app-native-desktop-app-using-electron/</a></em></p>\n<p><em><a href=\"https://electronjs.org/docs/tutorial/first-app\">https://electronjs.org/docs/tutorial/first-app</a></em></p>\n<p>*<a href=\"https://newsn.net/say/electron-vue-demo-mac-builder.html%E2%80%94%E2%80%94\">https://newsn.net/say/electron-vue-demo-mac-builder.html——</a> from 苏南大叔的《<a href=\"https://newsn.net/\">程序如此灵动~</a>》博客</p>\n<p><em><a href=\"https://www.jianshu.com/p/6b32763195cc\">https://www.jianshu.com/p/6b32763195cc</a></em></p>\n<p><em><a href=\"https://www.qcode.in/convert-vue-js-app-native-desktop-app-using-electron/\">https://www.qcode.in/convert-vue-js-app-native-desktop-app-using-electron/</a></em></p>\n</div>",
+            "title": "用 Vue 建立一个简单的 electron 桌面应用",
+            "last_reply_at": "2019-03-05T11:33:09.750Z",
+            "good": false,
+            "top": false,
+            "reply_count": 1,
+            "visit_count": 98,
+            "create_at": "2019-03-05T08:40:53.536Z",
+            "author": {
+                "loginname": "kalengo",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/8817810?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7c9b9690c14711cc8c9f2d",
+            "author_id": "5934bb555b07c1b24afa067e",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>在我们开发rest api时，有些接口处理时间比较长，可能直接先返回，然后生成一个任务，放在后台执行。</p>\n<p>面对这样的需求，请问一般是通过什么方式进行处理，比如生产者消费者模式？</p>\n</div>",
+            "title": "怎么设计异步的Rest api？",
+            "last_reply_at": "2019-03-05T11:20:30.944Z",
+            "good": false,
+            "top": false,
+            "reply_count": 6,
+            "visit_count": 270,
+            "create_at": "2019-03-04T03:29:26.150Z",
+            "author": {
+                "loginname": "zhengboah",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/17705410?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7cd6ed5b8cb21491ca5a8b",
+            "author_id": "573212537abbbd520cb244b3",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>RT</p>\n</div>",
+            "title": "把 Mysql 的数据异构到 MongoDB 如何做实时的同步?",
+            "last_reply_at": "2019-03-05T10:54:03.014Z",
+            "good": false,
+            "top": false,
+            "reply_count": 6,
+            "visit_count": 202,
+            "create_at": "2019-03-04T07:42:37.486Z",
+            "author": {
+                "loginname": "dlyt",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/18431616?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7ca27e5b8cb21491ca58a2",
+            "author_id": "56276af03f017c2b49b41575",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>有些 node 包用了 es modules 特性，比如 <a href=\"https://github.com/caolan/async\">async</a>  <a href=\"https://github.com/bitinn/node-fetch\">node-fetch</a></p>\n<p>我把这些项目 clone 到本地，希望能本地调试，看了下文档也没本地开发的说明，package.json 中也木有。想请教下如何 clone 到本地后能调试？谢谢🙏</p>\n</div>",
+            "title": "请教下 node 包源码中用了 es modules，clone 下来一般如何本地运行？",
+            "last_reply_at": "2019-03-05T10:44:45.561Z",
+            "good": false,
+            "top": false,
+            "reply_count": 9,
+            "visit_count": 223,
+            "create_at": "2019-03-04T03:58:54.416Z",
+            "author": {
+                "loginname": "hanzichi",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/10890665?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7c8d8b5b8cb21491ca56b6",
+            "author_id": "5c247db93898674067a78f02",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>egg.js中实现RESTfull api，vue请求post数据提示 missing csrf token</p>\n<p><img src=\"//static.cnodejs.org/FsadJ4J2Ln6qZilgzTaTWCZmYhzQ\" alt=\"2.png\"></p>\n</div>",
+            "title": "egg.js中实现RESTfull api，vue请求post数据提示 missing csrf token",
+            "last_reply_at": "2019-03-05T10:43:20.778Z",
+            "good": false,
+            "top": false,
+            "reply_count": 7,
+            "visit_count": 242,
+            "create_at": "2019-03-04T02:29:31.323Z",
+            "author": {
+                "loginname": "gougou168",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/46184813?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7e40d890c14711cc8ca8b8",
+            "author_id": "59e6c301bcfcc03162f2ffc3",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>无敌切面编程系列</p>\n<pre class=\"prettyprint\"><code>Object.prototype.valueOf=function(){return 1}\n</code></pre><p>目前已经在医院</p>\n</div>",
+            "title": "哇你居然在代码里面下毒系列--2",
+            "last_reply_at": "2019-03-05T09:26:48.046Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 102,
+            "create_at": "2019-03-05T09:26:48.046Z",
+            "author": {
+                "loginname": "spitWind",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/18753430?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7dd5bb5b8cb21491ca5dbb",
+            "author_id": "5909444b782dbc4b183ecfe2",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><blockquote>\n<p>重新编辑，重发</p>\n</blockquote>\n<p>最近沉迷 vscode 扩展无法自拔，开启写了新坑，也维护旧扩展。</p>\n<p>其中就有这么一个<a href=\"https://github.com/axetroy/vscode-npm-import-package-version\">扩展</a>是这样的: 显示导入的包版本号。</p>\n<p><img src=\"https://github.com/axetroy/vscode-npm-import-package-version/raw/master/screenshot/js.png\" alt=\"js\">\n<img src=\"https://github.com/axetroy/vscode-npm-import-package-version/raw/master/screenshot/ts.png\" alt=\"ts\">\n<img src=\"https://github.com/axetroy/vscode-npm-import-package-version/raw/master/screenshot/vue.png\" alt=\"vue\"></p>\n<p>代码很简单也很少，用<code>Babel/Typescript/vue-component</code>分别解析对应的文件，然后标注版本号。</p>\n<p>然而就是这么功能简单的扩展，启动速度居然超过其他所有稍微复杂一点的扩展。</p>\n<p><img src=\"https://i.loli.net/2019/03/05/5c7d63269f13f.jpg\" alt></p>\n<p><img src=\"https://user-images.githubusercontent.com/9758711/53754049-b668bf00-3eed-11e9-9334-6f380cc4f062.png\" alt=\"2019-03-05 02 20 51\"></p>\n<p>启动速度 <code>2431ms</code></p>\n<p><img src=\"https://i.loli.net/2019/03/05/5c7d62237d0d2.jpg\" alt></p>\n<p>这不科学呀, 到底是慢在哪里呢?</p>\n<p>分析了一下 <code>profile</code> 文件后，发现不是我写的代码慢，而是慢在了加载的第三方库</p>\n<h3>Typescript 的通病</h3>\n<p>Typescript 跟随 ECMA 标准，import 必须放在顶部.</p>\n<pre class=\"prettyprint language-typescript\"><code>import * as ts from &#x27;typescript&#x27;;\n\nexport function parser() {\n  &#x2F;&#x2F; 这里是你的业务逻辑\n  ts.parser();\n}\n</code></pre><p>问题就在于这. <code>typescript</code>在编译成<code>javascript</code>之后</p>\n<pre class=\"prettyprint language-ts\"><code>const ts = require(&quot;typescript&quot;)\n\nexport.parser = function parser() {\n  &#x2F;&#x2F; 这里是你的业务逻辑\n  ts.parser()\n}\n</code></pre><p>我们都知道<strong>require 函数加载模块都是同步进行的</strong>, 也就是我还没使用<code>parser</code>函数的时候，就加载这个模块了。</p>\n<p>而第三方模块加载，根据不同的包，加载时间各不相同。因为有些包，会在加载的时候做一些同步的初始化操作</p>\n<pre class=\"prettyprint language-ts\"><code>&#x2F;&#x2F; 某第三方包\n\n&#x2F;&#x2F; 这里做一些同步操作\n&#x2F;&#x2F; 例如定义map，for循环之类的\n\n&#x2F;&#x2F; 导出函数\nexport default function() {}\n</code></pre><p>而恰巧，Typescript 和 Babel/Babel-types 都有大量的这种操作, 导致拖慢了扩展初始化速度.</p>\n<h3>解决方案</h3>\n<p>问: 能不能在我使用这个函数的时候，才导入相应的包?\n答: require 就可以</p>\n<pre class=\"prettyprint language-diff\"><code>- import * as ts from &#x27;typescript&#x27;;\n\nexport function parser() {\n  &#x2F;&#x2F; 这里是你的业务逻辑\n+ const ts = require(&#x27;typescript&#x27;);\n  ts.parser();\n}\n</code></pre><p>问题就来了，<code>require</code> 的模块是没有类型。那使用<code>typescript</code>开发的体验就不是很好了.</p>\n<p>我们稍微改造一下</p>\n<pre class=\"prettyprint language-diff\"><code>- import * as ts from &#x27;typescript&#x27;;\n+ import TS = require(&#x27;typescript&#x27;); &#x2F;&#x2F; 这里只是导入类型而已\n\nexport function parser() {\n  &#x2F;&#x2F; 这里是你的业务逻辑\n+ const ts:typeof TS = require(&#x27;typescript&#x27;); &#x2F;&#x2F; 给require的模块附上类型\n  ts.parser();\n}\n</code></pre><p>OK! 大功告成，就这么简单。</p>\n<h3>结果对比</h3>\n<p>在我把这个简单的扩展按照上面的方式重构一遍之后，来看一下启动速度</p>\n<p><img src=\"https://user-images.githubusercontent.com/9758711/53754059-c6809e80-3eed-11e9-8a86-6cba7c459c01.png\" alt=\"2019-03-05 02 21 57\"></p>\n<p>更改后启动速度竟然仅用了<code>31ms</code>, 比之前快了 80 倍</p>\n<p><img src=\"https://i.loli.net/2019/03/05/5c7d6807d2fcc.jpg\" alt></p>\n<p><strong>最后愿天下没有拖慢速度的扩展，宇宙第一编辑器已经够慢了</strong></p>\n</div>",
+            "title": "我是如何把vscode扩展的启动速度提升80倍的",
+            "last_reply_at": "2019-03-05T08:29:44.953Z",
+            "good": false,
+            "top": false,
+            "reply_count": 9,
+            "visit_count": 271,
+            "create_at": "2019-03-05T01:49:47.700Z",
+            "author": {
+                "loginname": "axetroy",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/9758711?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c46759e3b948a2b4ab70483",
+            "author_id": "58d140302c8bf2a836456213",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p><strong>摘要：</strong> JS的&quot;编译原理&quot;。</p>\n<ul>\n<li>原文：<a href=\"https://segmentfault.com/a/1190000017961297\">JavaScript的工作原理：解析、抽象语法树（AST）+ 提升编译速度5个技巧</a></li>\n<li>作者：<a href=\"https://segmentfault.com/a/1190000017794020\">前端小智</a></li>\n</ul>\n<p><strong><a href=\"https://www.fundebug.com/\">Fundebug</a>经授权转载，版权归原作者所有。</strong></p>\n<p>这是专门探索 JavaScript 及其所构建的组件的系列文章的第 14 篇。</p>\n<p>如果你错过了前面的章节，可以在这里找到它们：</p>\n<ul>\n<li><a href=\"https://segmentfault.com/a/1190000017352941\">JavaScript 是如何工作的：引擎，运行时和调用堆栈的概述！</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017369465\">JavaScript 是如何工作的：深入V8引擎&amp;编写优化代码的5个技巧！</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017392370\">JavaScript 是如何工作的：内存管理+如何处理4个常见的内存泄漏 !</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017419328\">JavaScript 是如何工作的：事件循环和异步编程的崛起+ 5种使用 async/await 更好地编码方式！</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017448270\">JavaScript 是如何工作的：深入探索 websocket 和HTTP/2与SSE +如何选择正确的路径！</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017485968\">JavaScript 是如何工作的：与 WebAssembly比较 及其使用场景 !</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017578650\">JavaScript 是如何工作的：Web Workers的构建块+ 5个使用他们的场景!</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017749922\">JavaScript 是如何工作的：Service Worker 的生命周期及使用场景!</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017794020?_ea=6014340#articleHeader0\">JavaScript 是如何工作的：Web 推送通知的机制!</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017832686\">JavaScript是如何工作的：使用 MutationObserver 跟踪 DOM 的变化!</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017872125#articleHeader0\">JavaScript是如何工作的：渲染引擎和优化其性能的技巧!</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017903157\">JavaScript是如何工作的：深入网络层 + 如何优化性能和安全!</a></li>\n<li><a href=\"https://segmentfault.com/a/1190000017927665\">JavaScript是如何工作的：CSS 和 JS 动画底层原理及如何优化它们的性能！</a>-</li>\n</ul>\n<h3>概述</h3>\n<p>我们都知道运行一大段 JavaScript 代码性能会变得很糟糕。这段代码不仅需要通过网络传输，而且还需要解析、编译成字节码，最后执行。在之前的文章中，我们讨论了 JS 引擎、运行时和调用堆栈等，以及主要由谷歌 Chrome 和 NodeJS 使用的V8引擎。它们在整个 JavaScript 执行过程中都发挥着至关重要的作用。这篇说的抽象语法树同样重要:在这我们将了解大多数 JavaScript 引擎如何将文本解析为对机器有意义的内容，转换之后发生的事情以及做为 Web 开发者如何利用这一知识。</p>\n<h3>编程语言原理</h3>\n<p>那么，首先让我们回顾一下编程语言原理。不管你使用什么编程语言，你需要一些软件来处理源代码以便让计算机能够理解。该软件可以是解释器，也可以是编译器。无论你使用的是解释型语言(JavaScript、Python、Ruby)还是编译型语言(c#、Java、Rust)，都有一个共同的部分:将源代码作为纯文本解析为 <strong>抽象语法树(abstract syntax tree, AST)</strong> 的数据结构。</p>\n<p><strong>AST</strong> 不仅以结构化的方式显示源代码，而且在语义分析中扮演着重要角色。在语义分析中，编译器验证程序和语言元素的语法使用是否正确。之后，使用 AST 来生成实际的字节码或者机器码。</p>\n<blockquote>\n<p>抽象语法树（abstract syntax tree 或者缩写为 AST），或者语法树（syntax tree），是源代码的抽象语法结构的树状表现形式，这里特指编程语言的源代码。和抽象语法树相对的是具体语法树（concrete syntaxtree），通常称作分析树（parse tree）。一般的，在源代码的翻译和编译过程中，语法分析器创建出分析树。一旦 AST 被创建出来，在后续的处理过程中，比如语义分析阶段，会添加一些信息。</p>\n</blockquote>\n<h3>AST 程序</h3>\n<p>AST 不仅仅是用于语言解释器和编译器，在计算机世界中，它们还有多种应用。使用它们最常见的方法之一是进行静态代码分析。静态分析器不执行输入的代码，但是，他们仍然需要理解代码的结构。</p>\n<p>例如，你可能想要实现一个工具，该工具可以找到公共代码结构，以便你可以重构它们以减少重复。你可能会通过使用字符串比较来实现这一点，但这个会相当简单且有局限性。</p>\n<p>当然，如果你对实现这样的工具感兴趣，你不需要编写自己的解析器。有许多与 Ecmascript规范完全兼容的开源项目。<strong>Esprima</strong> 和 <strong>Acorn</strong> 即是黄金搭档，还有许多工具可以帮助解析器生成输出，即 <strong>ASTs</strong> ，ASTs 被广泛应用于代码转换。</p>\n<p>例如，你可能希望实现一个将 Python 代码转换为J avaScript 的转换器。基本思想是使用Python 转换器生成 AST，然后使用 AST 生成JavaScript代码。</p>\n<p>你可能会觉得难以置信，事实是 ASTs 只是部分语言的不同表示法。在解析之前，它被表示为遵循一些规则的文本，这些规则构成了一种语言。在解析之后，它被表示为一个树结构，其中包含与输入文本完全相同的信息。因此，也可以进行反向解析然后回到文本。</p>\n<p><strong>代码部署后可能存在的BUG没法实时知道，事后为了解决这些BUG，花了大量的时间进行log 调试，这边顺便给大家推荐一个好用的BUG监控工具<a href=\"https://www.fundebug.com/?utm_source=xiaozhi\">Fundebug</a>。</strong></p>\n<h3>JavaScript 解析</h3>\n<p>让我们看看 AST 是如何构建的。我们用一个简单的 JavaScript 函数作为例子:</p>\n<pre class=\"prettyprint language-javascript\"><code>function foo(x) {\n    if (x &gt; 10) {\n        var a = 2;\n        return a * x;\n    }\n\n    return x + 10;\n}\n</code></pre><p>解析器会产生如下的 AST：</p>\n<p><img src=\"https://image.fundebug.com/2019-01-21-01.png\" alt></p>\n<p>注意，为了观看方便，这里是解析器将生成的结果的简化版本。实际的 AST 要复杂得多。然而，这里的目的是为了运行源码之前的第一个步骤前。如果人想查看实际的 AST 是什么样子，可以访问 <a href=\"https://astexplorer.net/\">AST Explorer</a>。它是一个在线工具，你以在其中输入一些 JavaScript 并输出对应的 AST。</p>\n<p>你可能会问，为什么需要知道 JavaScript解析器工作原理，毕竟这是浏览器工作，你想法是部分正确。下图展示了 JavaScript 执行过程中不同阶段的耗时。仔细瞅瞅，你或许会发现一些有趣的东西。</p>\n<p><img src=\"https://image.fundebug.com/2019-01-21-02.png\" alt></p>\n<p>发现没？ 通常情况下，浏览器解析 JavaScript 大约需占总执行时间的 <code>15%</code> 到 <code>20%</code>。我没有具体统计过这些数值。这些是来自真实应用程序和以某种方式使用 JavaScript 的网站的统计数据。也许 <code>15%</code> 看起来不是很多，但相信我，这是很多。</p>\n<p>一个典型的单页程序加载 0.4 mb 左右的 JavaScript，浏览器需要大约 <code>370ms</code> 来解析它。也许你会又说，这也不是很多嘛，本身花费的时间并不多。但请记住，这只是将 JavaScript 代码解析为 AST 所需要的时间。这并不包括运行本身的时间，也不包括在页面加载 ，如 CSS 和 HTML 渲染过程的耗时。这些还只涉及桌面，移动浏览器的情况会更加复杂，在手机上花在解析上的时间通常是桌面浏览器的 2 到 5 倍。</p>\n<p><img src=\"https://image.fundebug.com/2019-01-21-03.jpeg\" alt></p>\n<p>上图显示了 1MB JavaScript 包在不同类的移动和桌面浏览器解析时间。</p>\n<p>更重要的是，为了获得更多类原生的用户体验而把越来越多的业务逻辑堆积在前端，Web 应用程序正变得越来越复杂。你可以轻易地想到网络应用受到的性能影响。只需打开浏览器开发工具，然后使用该工具来解析、编译和浏览器中发生的所有其他事情上所消耗的时间。</p>\n<p><img src=\"https://image.fundebug.com/2019-01-21-04.jpeg\" alt></p>\n<p>不幸的是，移动浏览器上没有开发者工具。不过不用担心，这并不意味着你对此无能为力。因为有 <a href=\"https://github.com/danielmendel/DeviceTiming\">DeviceTiming</a> 工具,它可以用来帮助检测受控环境中脚本的解析和运行时间。它通过插入代码来封装本地代码，这样每次从不同的设备访问页面时，就可以在本地测量解析和运行时间。</p>\n<p>好事就是 JavaScript 引擎做了很多工作来避免冗余的工作，并得到了更好的优化，以下为主流浏览器使用的技术。</p>\n<p>例如，V8 实现脚本流(script streaming)和代码缓存技术。脚本流即脚本一旦开始下载，<code>async</code> 和 <code>deferred</code>的 脚本就会在单独的线程上解析。这意味着在下载脚本完成后几乎立即完成解析，这会提升 10% 的页面加载速度。</p>\n<p>每次访问页面时，JavaScript 代码通常编译为字节码。 然而，一旦用户访问另一页面，该字节码就被丢弃。 发生这种情况是因为编译后的代码很大程度上依赖于编译时机器的状态和上下文。 这是 Chrome 42 引入字节码缓存的原因。 该技术会本地缓存编译过的代码，这样当用户返回同一页面时，诸如下载，解析和编译等所有步骤都会被跳过。 这使得 Chrome 可以节省大约 40％ 的解析和编译时间。 此外，这还可以节省移动设备的电量。</p>\n<p>在 Opera 中，<a href=\"https://dev.opera.com/blog/carakan/\">Carakan</a> 引擎可以重用另一个程序最近编译过的输出。没有要求代码必须来自相同的页面甚至同个域下。这种缓存技术实际上非常高效，还可以完全跳过编译步骤。它依赖于典型的用户行为和浏览场景:每当用户在应用程序/网站中遵循某个用户的特定浏览习惯，都会加载相同的 JavaScript 代码。不过，Carakan 引擎早已被谷歌的 V8 所取代。</p>\n<blockquote>\n<p>Opera 新的 JavaScript 引擎 “Carakan”，目前速度是其他已存在 JavaScript 引擎（基于 SunSpider）的2.5倍。其在转化为本地机器代码时专门针对正则表达式做了优化。</p>\n</blockquote>\n<p>Firefox 使用的 <a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey\">SpiderMonkey</a> 引擎不会缓存所有内容。它可以过渡到监视阶段，在这个阶段中，它计算执行给定脚本的次数。基于此计算，它推导出频繁使用而可以被优化的代码部分。</p>\n<blockquote>\n<p>SpiderMonkey 是 Mozilla 项目的一部分，是一个用 C 语言实现的 JavaScript 脚本引擎，另外还有一个叫做Rhino 的 Java 版本。</p>\n</blockquote>\n<p>显然，有些人决定什么都不做。Safari 的首席开发人员 <a href=\"https://en.wikipedia.org/wiki/Maciej_Stachowiak\">Maciej Stachowiak</a> 表示，Safari 不会对编译后的字节码进行任何缓存。缓存技术他们是有考虑过的问题，但是他们还没有实现，因为生成代码的耗时小于总运行时间的 2%。</p>\n<p>这些优化不会直接影响 JavaScript 源代码的解析，但是会尽可能完全避免。毕竟做总比没做好点？</p>\n<p>我们可以做很多事情来改善应用程序的初始加载时间。最小化加载的 JavaScript 数量：代码越小、解析所需要时间就越少，运行时间也就越小。要做到这一点，我们只能在当前的路由上加载所需的代码，而不是加载一大陀的代码。例如，<a href=\"https://developers.google.com/web/fundamentals/performance/prpl-pattern/\">PRPL模式</a>即表示该种代码传输类型。或者，可以检查代码的依赖关系，看看是否有什么冗余的依赖导致代码库膨胀，然而，这些东西需要很大的篇幅来进行讨论。</p>\n<p>本文的主要的目的讨论作为 Web 开发人员可以做些什么来帮助 JavaScript 解析器更快地完成它的工作。还有,现代JavaScript 解析器使用 <strong>启发法(heuristics)</strong> 来决定是否立即运行指定的代码片段或者推迟在未来的某个时候运行。基于这些启发法，解析器将进行即时或懒解析。</p>\n<blockquote>\n<p>启发法是针对模型求解方法而言的，是一种逐次逼近最优解的方法。这种方法对所求得的解进行反复判断实践修正直至满意为止。启发法的特点是模型简单，需要进行方案组合的个数少，因此便于找出最终答案。此方法虽不能保证得到最优解，但只要处理得当，可获得决策者满意的近似最优解。一般步骤包括:定义一个计算总费用的方法;报定判别准则;规定方案改选的途径;建立相应的模型;送代求解。</p>\n</blockquote>\n<p>立即解析会运行需要立即编译的函数。它主要做三件事:构建 AST，构建作用域层级和查找所有语法错误。另一方面， 懒解析只运行未编译的函数。它不构建AST，也不查找所有语法错误，它只构建作用域层级，与立即解析相比节省了大约一半的时间。</p>\n<p>显然，这不是一个新概念。即使像 IE 9 这样的浏览器也支持这种类型的优化，尽管与现在的解析器的工作方式相比，这种优化方式还很初级。</p>\n<p>来看一个例子，假设有以下代码片段:</p>\n<pre class=\"prettyprint language-javascript\"><code>function foo() {\n    function bar(x) {\n        return x + 10;\n    }\n\n    function baz(x, y) {\n        return x + y;\n    }\n\n    console.log(baz(100, 200));\n}\n\nfoo()\n</code></pre><p>就像前面的例子一样，代码被输入到语法分析器中，语法分析器进行语法分析并输出AST，如下：</p>\n<ul>\n<li>声明函数 <code>foo</code></li>\n<li>调用函数 <code>foo</code></li>\n<li>在 <code>foo</code> 里声明函数 <code>bar</code> 接收参数 <code>x</code>, 并返回 <code>x</code> 和 10 相加的结果</li>\n<li>在 <code>foo</code> 里声明函数 <code>baz</code> 接收参数 <code>x</code>和 <code>y</code>, 并返回 <code>x</code> 和 <code>y</code> 相加的结果</li>\n<li>调用 <code>baz</code> 函数传入 100 和 2。</li>\n<li>调用 <code>console.log</code> 参数为之前函数调用的返回值。</li>\n</ul>\n<p><img src=\"https://image.fundebug.com/2019-01-21-05.png\" alt></p>\n<p>那么期间发生了什么? 解析器看到 <code>bar</code> 函数的声明、<code>baz</code> 函数的声明、<code>bar</code>函数的调用和 <code>console.log</code> 的调用。但是，解析器做了一些完全无关的额外工作即解析 <code>bar</code> 函数。为什么这无关紧要? 因为函数 <code>bar</code> 从来没有被调用过(或者至少在那个时候没有)。这是一个简单的示例，看起来可能有些不同寻常，但在许多实际应用程序中，许多声明的函数从未被调用。</p>\n<p>这里不解析<code>bar</code>函数，该函数声明了却没有调用它。只在需要的时候在函数运行前进行真正的解析。懒解析仍然需要找到函数的整个主体并为其声明，但仅此而已。它不需要语法树，因为它还没有被处理。另外，它不会从堆中分配内存，而堆通常会占用相当多的系统资源，简而言之，跳过这些步骤会带来很大的性能改进。</p>\n<p>所以之前的例子，解析器实际上会像如下这样解析：</p>\n<p><img src=\"https://image.fundebug.com/2019-01-21-06.png\" alt></p>\n<p>注意，这里只确认 <code>bar</code> 函数声明，没有进入 <code>bar</code> 函数体。在这种情况下，函数体只是一个返回语句。但是，与大多数实际应用程序一样，它可以更大，包含多个返回语句、条件语句、循环、变量声明，甚至嵌套函数声明。这完全是在浪费时间和系统资源，因为这个函数永远不会被调用。</p>\n<p>这是一个相当简单的概念，但实际上，它的实现是非常难的，不局限于以上示例。整个方法还可以适用于函数、循环、条件、对象等。基本上，所有需要解析的东西。</p>\n<p>例如，下面是一个非常常见的 JavaScript 模式。</p>\n<pre class=\"prettyprint language-javascript\"><code>var myModule = (function() {\n     &#x2F;&#x2F; 整个模块的逻辑\n     &#x2F;&#x2F; 返回模块对象\n})();\n</code></pre><p>大多数现代 JavaScript 解析器都能识别这种模式，此模式表示代码需要立即解析。</p>\n<p>那么为什么解析器不都使用懒解析呢? 如果懒解析某些代码，这些代码需要立即执行，这实际上会使代码运行速度变慢。需要运行一次懒解析之后进行另一个立即解析，这和立即解析相比，运行速度会慢 50%。</p>\n<p>现在对解析器底层原理有了大致的了解，是时候考虑如何提高解析器的解析速度。可以用这种方式编写代码，以便在正确的时间解析函数。大多数解析器都能识别一种模式:使用括号封装函数。对于解析器来说，这几乎总是一个积极的信号，即函数需要立即执行。如果解析器看到一个左括号，紧接着是一个函数声明，它将立即解析这个函数。可以通过显式地声明立即执行的函数来帮助解析器加快解析速度。</p>\n<p>假设有一个名为 <code>foo</code> 的函数。</p>\n<pre class=\"prettyprint language-javascript\"><code>function foo(x) {\n    return x * 10;\n}\n</code></pre><p>因为没有明显地标识表明需要立即运行该函数所以浏览器会进行懒解析。然而，我们确定这是不对的，那么可以运行两个步骤。</p>\n<p>首先，将函数存储在一个变量中:</p>\n<pre class=\"prettyprint language-javascript\"><code>var foo = function foo(x) {\n    return x * 10;\n};\n</code></pre><p>注意，这里有使用函数的名称 <code>foo</code>,这不是必需的，但是建议这样做，因为在抛出异常的情况下，stacktrace 会保留实际函数名称，而不仅仅是 <code>&lt;anonymous&gt;</code>。</p>\n<p>以上事例解析器执行懒解析，可以用括号封装起来，让解析器进行立即解析：</p>\n<pre class=\"prettyprint language-javascript\"><code>var foo = (function foo(x) {\n    return x * 10;\n});\n</code></pre><p>现在，解析器看见 <code>function</code> 关键字前的左括号便会立即进行解析。</p>\n<p>因为需要知道解析器在哪些情况下执行懒解析或者立即解析，所以很难手动管理。此外，还需要花时间考虑是否立即调用某个函数，肯定没人想这么做的。</p>\n<p>最后，这种地让代码更难阅读和理解。可以使用 <code>Optimize.js</code> 可以帮我们做这类事情，该工具只是用来优化 JavaScript 源代码的初始加载时间，它们对代码进行静态分析，然后通过使用括号封装需要立即运行的函数以便浏览器立即解析并准备运行它们。</p>\n<p>像往常一样编码，然后有一段代码看起来像这样的：</p>\n<pre class=\"prettyprint language-javascript\"><code>(function() {\n    console.log(&#x27;Hello, World!&#x27;);\n})();\n</code></pre><p>一切看起来都很好，如预期的那样工作，而且速度很快，因为在函数声明之前添加左括号。当然，在进入生产环境之前需要进行代码压缩，以下为压缩工具的输出：</p>\n<pre class=\"prettyprint language-javascript\"><code>!function(){console.log(&#x27;Hello, World!&#x27;)}();\n</code></pre><p>好像没问题，代码像以前一样工作。但是好像少了什么，压缩工具删除包裹函数的括号，而是在函数前放置了一个感叹号，这意味着解析器将跳过此并将执行惰解析。</p>\n<p>最重要的是，为了能够执行该函数，它将在懒解析之后立即进行立即解析。 这会使代码运行得更慢，幸运的是，可以利用 <code>Optimize.js</code> 来解决此类问题，传给 <code>Optimize.js</code> 压缩过的代码会输出如下代码：</p>\n<pre class=\"prettyprint language-javascript\"><code>!(function(){console.log(&#x27;Hello, World!&#x27;)})();\n\n</code></pre><p>这还差不多，现在拥有两全其美方案：压缩代码且解析器正确地识别懒解析和立即解析的函数。</p>\n<h3>预编译</h3>\n<p>但为什么不能在服务器端完成所有这些工作呢？ 毕竟，最好这样做一次并将结果提供给客户端，而不强制各个客户端重复做该项事情。那么，目前正在讨论引擎是否应该提供一种执行预编译脚本的方法，这样就可以节省浏览器运行时间。</p>\n<p>从本质上讲，该思路是拥有可以生成字节码的务器端工具，这样只需要传输字节码并在客户端运行，之后会看到启动时间的一些主要差异。 这可能听起来很诱人，但事情并非那么简单，还可能会产生相反的效果，因为它会更大，并且很可能需要签署代码并出于安全原因对其进行处理。 例如，V8 团队正在努力解决重复解析问题，这样预编译有可能实际并没有多大的用处。</p>\n<h3>提升编译速度一些建议</h3>\n<ul>\n<li>检查依赖，减少不必要的依赖</li>\n<li>分割代码为更小的块而不是一整陀的</li>\n<li>尽可能推迟加载 JavaScript，按需要加载或者动态加载。</li>\n<li>使用开发者工具和 DeviceTiming 来检测性能瓶颈</li>\n<li>用像 Optimize.js 的工具来帮助解析器选择立即解析或者懒解析以加快解析速度</li>\n</ul>\n<p><strong>原文：<a href=\"https://blog.sessionstack.com/how-javascript-works-parsing-abstract-syntax-trees-asts-5-tips-on-how-to-minimize-parse-time-abfcf7e8a0c8\">How JavaScript works: Parsing, Abstract Syntax Trees (ASTs) + 5 tips on how to minimize parse time</a></strong></p>\n<h3>关于Fundebug</h3>\n<p><a href=\"https://www.fundebug.com/\">Fundebug</a>专注于JavaScript、微信小程序、微信小游戏、支付宝小程序、React Native、Node.js和Java线上应用实时BUG监控。 自从2016年双十一正式上线，Fundebug累计处理了9亿+错误事件，付费客户有Google、360、金山软件、百姓网等众多品牌企业。欢迎大家<a href=\"https://www.fundebug.com/team/create\">免费试用</a>！</p>\n<p><img src=\"https://static.fundebug.cn/wechat_slogan.png\" alt></p>\n</div>",
+            "title": "JavaScript的工作原理：解析、抽象语法树（AST）+ 提升编译速度5个技巧",
+            "last_reply_at": "2019-03-05T07:28:42.189Z",
+            "good": true,
+            "top": false,
+            "reply_count": 10,
+            "visit_count": 2121,
+            "create_at": "2019-01-22T01:45:02.116Z",
+            "author": {
+                "loginname": "Fundebug",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/26496557?v=4&s=120"
+            }
+        },
+        {
+            "id": "5b8de66137b3005a0b0e6b3f",
+            "author_id": "5b8de41bbf116a8c0e42579f",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>Egg.js入门视频教程主要讲了Egg的环境搭建   egg的控制器      egg服务  egg中间件   egg路由 egg扩展   egg模板引擎  egg cookie   egg session</p>\n<p><strong>Eggjs 视频教程百度网盘分享接</strong>： <a href=\"https://pan.baidu.com/s/1t6XHpny8-H8mApLkzcsS8w\">https://pan.baidu.com/s/1t6XHpny8-H8mApLkzcsS8w</a></p>\n<p><strong>或者此连接Egg.js视频教程10讲入门链接</strong>： <a href=\"https://pan.baidu.com/s/1-jdCXKGgfk9yI8xJOOhPhg\">https://pan.baidu.com/s/1-jdCXKGgfk9yI8xJOOhPhg</a>  <strong>密码</strong>：4b6i</p>\n<p><strong>来源</strong>  <a href=\"https://cnodejs.org/topic/5b7ac9c7c52ad1482eb940bf\">https://cnodejs.org/topic/5b7ac9c7c52ad1482eb940bf</a></p>\n<p>希望老铁门能喜欢\n<img src=\"//static.cnodejs.org/FoPZNWCMpHqWFAb2QDns-UhIMX-3\" alt=\"egg01.png\"></p>\n<p><img src=\"//static.cnodejs.org/Fu4_-OevpWiKHFqeEGBOW53MCdnE\" alt=\"egg02.png\"></p>\n<p><img src=\"//static.cnodejs.org/FtOEkaeRTUNyuWE2mhvazrxPc6cd\" alt=\"egg03.png\"></p>\n<p><img src=\"//static.cnodejs.org/FtJsuDe3kbcNYWWcJyfxuE08wVs5\" alt=\"egg05.png\"></p>\n<p><img src=\"//static.cnodejs.org/Fp8erhbPkGZrsYFsd-gxn2z4Gssb\" alt=\"222.png\"></p>\n<p><img src=\"//static.cnodejs.org/FhCAuCKVwbQnTCJWtkGKv6ZR8toN\" alt=\"06.png\"></p>\n</div>",
+            "title": "Egg.js视频教程-Eggjs入门视频教程网盘免费分享-10讲入门基础希望老铁门能喜欢",
+            "last_reply_at": "2019-03-05T06:59:44.118Z",
+            "good": false,
+            "top": false,
+            "reply_count": 83,
+            "visit_count": 9863,
+            "create_at": "2018-09-04T01:56:49.179Z",
+            "author": {
+                "loginname": "zlyuanteng",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/42952042?v=4&s=120"
+            }
+        },
+        {
+            "id": "5b972808ce9d14c2254df8b0",
+            "author_id": "56ea011fa70420bd420d0001",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>楼主自己也是才踩 react 的路。。之前偷懒用了 vuejs 就不思上进了…无赖美帝都是 react 占据了90个点的江山.*\n**一直觉得学习，选择好的学习资料和学习的顺序很重要… 对了，路子顺…挫折感小. ** 希望自己的学习顺序，能给别人带来帮助.\n群主弄了个 QQ 技术交流群: 371932256 ，方便讨论我的 cnodejs 的 react 版本的项目…一起进步…也欢迎高手加入…哈哈…</p>\n<ol>\n<li>\n<p>掌握 react 的基本概念\n1.1 看视频课程：<a href=\"https://time.geekbang.org/course/intro/100\">https://time.geekbang.org/course/intro/100</a> （非推广…只是个人是个很热心的妹砸） 01 ~10\n1.2 边看然后边刷官方的 Main Concepts 部分的文档https://reactjs.org/docs/hello-world.html 做好第一步和第二步后，对 react 有基本的概念了…</p>\n</li>\n<li>\n<p>学习 redux/react-redux\n2.1 看ruanyifeng 的 redux/react-redux 教程… 看教程第一二篇的时候，会有个基本的概念呢…\n2.2  然后返回去看 11~ 15， 视频讲解的 redux、react 课程\n当然你在刷课课程中，也会不时的去看看官方文档看看些细节. flux 等概念\n2.3  在上述步骤（3.1 ~3.2 ） 中，你会做 Counter 的例子，了解 redux 的基本玩法… 也会把 Counter的例子改成结合 react-redux 类型的;\n如果这两个例子完成了…可以试试这个视频教程…\n2.4 完成一个小demo: <a href=\"https://www.youtube.com/watch?v=93p3LxR9xfM&amp;t=1168s\">https://www.youtube.com/watch?v=93p3LxR9xfM&amp;t=1168s</a> 这部分想必，对新手会绕一段时间…特别是 redux 这部分如果你没进去看过源码…有时候会被 API 绕晕…觉得 API 多\n这边是楼主写的 redux 阅读笔记: <a href=\"https://github.com/pandoracat/learn-react/blob/master/Notes/Redux/includes/markdown/ReduxSourceCode.md\">https://github.com/pandoracat/learn-react/blob/master/Notes/Redux/includes/markdown/ReduxSourceCode.md</a></p>\n</li>\n<li>\n<p>完成学习 react基本概念… redux/react-redux 基本用法后…（一定要试着敲每个课程的代码哟，扎扎实实走过来的，你内心才踏实)\n可以直接去 react-router 官网看看 demo, 边用用demo, 了解文档，了解用法. 如果有朋友觉得英文文档看起来吃力，可以看看这个 <a href=\"https://www.jianshu.com/p/1781bc1dd938#24-history\">https://www.jianshu.com/p/1781bc1dd938#24-history</a></p>\n</li>\n<li>\n<p>学习完这些后，咱看看 react 项目，代码咋拆分…咋组织\n课程22~25 ： <a href=\"https://time.geekbang.org/course/detail/100-11278\">https://time.geekbang.org/course/detail/100-11278</a></p>\n</li>\n<li>\n<p>这些都过了,下面看 react 怎么测试。关于 react 测试： 强行硬广一波自己的笔记：<a href=\"https://github.com/pandoracat/frontend-testing\">https://github.com/pandoracat/frontend-testing</a> ，我记录了自己的 javascript 测试的学习路程…</p>\n</li>\n<li>\n<p>上面这些你都做了…咱们再把视频教程撸撸… 再次提升下自己的理解…</p>\n</li>\n<li>\n<p>最后，react cnode , 新手练手都用它 😎…看看 它的 api, 咱们 ready go 写个项目试试.\n这边是我正在写的 <a href=\"https://github.com/pandoracat/react-cnode\">https://github.com/pandoracat/react-cnode</a> 欢迎瞧瞧…我会写自己的 readme, 方便你照着模仿一个…\n弱弱的觉得自己设计的风格还不错（偷笑,我是一个审美超级弱的前端妹纸）\n怎么开始这个用 <a href=\"http://cnodejs.org\">cnodejs.org</a> 做 api 服务器的练手项目呢?请点击：<a href=\"https://github.com/pandoracat/react-cnode\">https://github.com/pandoracat/react-cnode</a></p>\n</li>\n</ol>\n<p>群主弄了个 QQ 技术交流群: 371932256 ，方便讨论我的 cnodejs 的 react 版本的项目…一起进步…也欢迎高手加入…哈哈…</p>\n</div>",
+            "title": "分享自己的 react 学习路径",
+            "last_reply_at": "2019-03-05T06:48:42.435Z",
+            "good": false,
+            "top": false,
+            "reply_count": 32,
+            "visit_count": 3729,
+            "create_at": "2018-09-11T02:27:20.076Z",
+            "author": {
+                "loginname": "alicePan",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/9105986?v=4&s=120"
+            }
+        },
+        {
+            "id": "5bb0bf6f37a6965f59051df3",
+            "author_id": "5ba61ea38f5b0c1c59ea10b6",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><h2>在线体验地址:<a href=\"http://vip.52tech.tech/\">http://vip.52tech.tech/</a></h2>\n<h2>GIthub源码：<a href=\"https://github.com/xiugangzhang/vip.github.io\">https://github.com/xiugangzhang/vip.github.io</a></h2>\n<h2>项目预览</h2>\n<p><img src=\"//static.cnodejs.org/FmjZMm4b3MUqJIuSB5aYS2PEW0pf\" alt=\"preview.jpg\"></p>\n<ul>\n<li>主页面\n<img src=\"//static.cnodejs.org/FhTjrj9HgY37ojGYNdLWupmBfSyv\" alt=\"preview.jpg\"></li>\n<li>登录页面\n<img src=\"//static.cnodejs.org/FrZr5Mck4VQD9ndVXhJGqA9XwHsU\" alt=\"login.jpg\"></li>\n<li>注册页面\n<img src=\"//static.cnodejs.org/FnXwM1CtMBcA7cFv66vlYb-t559E\" alt=\"register.jpg\"></li>\n<li>会员中心\n<img src=\"//static.cnodejs.org/FtCfCUeeIA8Y0WnYkhvzqlweqPbs\" alt=\"user.jpg\"></li>\n<li>电影播放页面\n<img src=\"//static.cnodejs.org/FryrTyzEeEFuOgD1uXrkwF4MzXn-\" alt=\"play.jpg\"></li>\n<li>电影弹幕功能\n<img src=\"//static.cnodejs.org/FhcOXAvbMZuafMrJzU00fMvRXot9\" alt=\"danmu.jpg\"></li>\n</ul>\n<h2>视频网站项目已经完功能如下：</h2>\n<h3>v1.0.3（当前最新版本）</h3>\n<ul>\n<li>\n<ol>\n<li>增加自动抓取功能，网站数据定期实时更新</li>\n</ol>\n<ul>\n<li>电影和电视剧数据抓取</li>\n<li>电影数据信息前端展现</li>\n</ul>\n</li>\n<li>\n<ol>\n<li>电影页面图片的自动抓取、下载和展示</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>代码结构调整</li>\n</ol>\n</li>\n</ul>\n<h3>v1.0.2</h3>\n<ul>\n<li>\n<ol>\n<li>简化程序安装流程，新增可视化安装界面</li>\n</ol>\n<ul>\n<li>用户可直接输入数据库名、数据库地址、数据库用户名、数据库密码信息一键完成程序的安装</li>\n</ul>\n</li>\n<li>\n<ol>\n<li>页面部分结构的调整</li>\n</ol>\n</li>\n</ul>\n<h3>v1.0.1</h3>\n<ul>\n<li>\n<ol>\n<li>用户中心的管理</li>\n</ol>\n<ul>\n<li>对于已经注册的用户，实现用户基本信息的修改</li>\n<li>用户密码的修改</li>\n<li>用户评论记录的查看</li>\n<li>用户收藏电影的查看和播放</li>\n<li>用户登录日志的查看</li>\n</ul>\n</li>\n<li>\n<ol>\n<li>电影搜索功能（特色功能）</li>\n</ol>\n<ul>\n<li>实现了根据视频播放地址和视频名称全网视频的搜索和播放功能</li>\n<li>实现了正在热映，即将上映和TOP250的电影列表的展示</li>\n<li>电影收藏和取消功能</li>\n</ul>\n</li>\n<li>\n<ol>\n<li>弹幕功能（特色功能）</li>\n</ol>\n<ul>\n<li>类似于B站等其他视频网站的弹幕功能，用户在登录之后可以实现在线发言</li>\n</ul>\n</li>\n</ul>\n<h3>v1.0.0</h3>\n<ul>\n<li>\n<ol>\n<li>用户主页的搭建：</li>\n</ol>\n<ul>\n<li>实现了主页轮播图的显示和切换，用户可以从数据库中自由配置和切换轮播图的显示</li>\n<li>实现了主页电影列表的显示：从数据库文件读取电影和电视剧列表信息并在前台显示</li>\n</ul>\n</li>\n<li>\n<ol>\n<li>用户登录和注册页面的搭建：</li>\n</ol>\n<ul>\n<li>实现了用户的登录和注册功能</li>\n<li>用户注册和登录验证码提示功能</li>\n</ul>\n</li>\n<li>\n<ol>\n<li>电影播放页面的搭建</li>\n</ol>\n<ul>\n<li>对于其他页面的任意可以展现电影列表的页面，用户可以直接点击列表，直接进入播放页面</li>\n<li>播放页面电影详细信息的展现</li>\n<li>对于加载速度较慢的视频，用户可以自由切换播放接口进行加速</li>\n<li>用户可以在相应的播放页面查看其他用户已经发表的评论，同时也可以在登录之后自由发表评论</li>\n</ul>\n</li>\n</ul>\n<h3>其他</h3>\n<ul>\n<li>\n<ol>\n<li>页面整体的风格模仿了Discuz等论坛网站的布局</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>网站首页的轮播图效果模仿了优酷、爱奇艺、腾讯视频等主流视频网站的轮播图效果，并且对该部分的效果实现进行了代码封装</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>电影底部的的友情链接，使用了大部分网站的分栏布局，用户可以添加自己的QQ群以及微信公众号方便增加自己网站的人气</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>主要列表的分页功能，对于一些内容显示较多的不能再一页显示完整的页面，使用了ajax无刷新分页对数据进行多条展示，提高了用户的体验</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>目前主流浏览器中也做了相应测试，建议大家使用谷歌或者火狐浏览器，效果可能会更好</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>未使用其他第三方框架，首页和播放页均为纯原生的HTML，CSS， js实现（至于这个xframe-min-1.0.js文件可以参见我的GitHub xframe.js这个开源项目）</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>电影播放页面：此处也是类似于当前主流网站的的播放页面，左侧为播放窗口，右侧部分为电影的详细信息</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>底部导航：使用分栏的方式实现了底部的导航，前面的为友情链接，后面的一个为网站的微信，Q微博等联系方式</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>用户中心：这部分实现了修改密码，评论，登录，日志管理，收藏电影的功能，用户可以自由切换</li>\n</ol>\n</li>\n</ul>\n<h2>程序目录结构说明</h2>\n<pre class=\"prettyprint\"><code>vip.github.io:\n├─controllers               &#x2F;&#x2F; 控制层\n├─data                      &#x2F;&#x2F; 数据抓取层\n├─logs                      &#x2F;&#x2F; 后台日志\n│  ├─errlog                 &#x2F;&#x2F; 错误日志\n│  ├─othlog                 &#x2F;&#x2F; 其他日志\n│  └─reqlog                 &#x2F;&#x2F; 请求日志\n├─models                    &#x2F;&#x2F; 模型层\n├─static                    &#x2F;&#x2F; 静态页\n│  ├─css                    &#x2F;&#x2F; 样式表\n│  ├─images                 &#x2F;&#x2F; 静态图片资源\n│  └─js                     &#x2F;&#x2F; js脚本\n├─utils                     &#x2F;&#x2F; 工具相关\n├─views                     &#x2F;&#x2F; 视图层\n└─www                       &#x2F;&#x2F; 静态资源\n    ├─css                   &#x2F;&#x2F; 样式表\n    ├─html                  &#x2F;&#x2F; html文件\n    ├─images                &#x2F;&#x2F; 静态图片资源\n    ├─js                    &#x2F;&#x2F; js脚本\n    │  └─movielist          &#x2F;&#x2F; 搜索页电影列表\n    │      ├─components     &#x2F;&#x2F; top250&#x2F;即将上映\n    │      └─in_theaters    &#x2F;&#x2F; 正在热映\n    └─uploads               &#x2F;&#x2F; 文件上传目录\n        ├─avatar            &#x2F;&#x2F; 用户图像\n        └─movie             &#x2F;&#x2F; 电影图标\n\n</code></pre><h2>程序安装方法</h2>\n<ul>\n<li>\n<ol>\n<li>确保电脑已经安装了NodeJS环境，运行版本尽量保持最新（V8以上吧），选择本地的一个路径，然后运行命令：</li>\n</ol>\n</li>\n</ul>\n<pre class=\"prettyprint\"><code>   git clone https:&#x2F;&#x2F;github.com&#x2F;xiugangzhang&#x2F;vip.github.io.git\n</code></pre><ul>\n<li>\n<ol>\n<li>进入程序的主目录（包含app.js的那个文件夹）运行命令：npm install，系统就会自动安装该程序的依赖包；</li>\n</ol>\n</li>\n<li>\n<ol>\n<li>在以上的步骤都执行完成且正确的情况下，就可以在程序主目录下面（有app.js的那个目录）,运行命令</li>\n</ol>\n</li>\n</ul>\n<pre class=\"prettyprint\"><code>   node app.js\n</code></pre><p>之后就会自动在浏览器中打开本程序安装的主界面；</p>\n<ul>\n<li>\n<ol>\n<li>如果是windows环境下，本程序提供了可视化的安装。用户可在程序的安装界面输入数据库名、数据库主机地址、数据库用户名、数据库密码，之后点击按钮立即安装即可，在输入的参数全部正确的情况下，就会后台自动安装程序，安装成功之后会自动跳转到网站首页；\n<img src=\"//static.cnodejs.org/FqNdjsfo5whahU-WvEC8WOpBBXA5\" alt=\"installing.jpg\"></li>\n</ol>\n</li>\n<li>\n<ol>\n<li>如果是Linux环境下，请提前准备好数据库名（database=video）、数据库主机地址（host=localhost）、数据库用户名（user=root）、数据库密码（password=123456 ），按照如下格式保存为config.properties文件，请确保这里的配置信息和你的数据库配置信息完全一致；</li>\n</ol>\n</li>\n</ul>\n<pre class=\"prettyprint\"><code>    database=video               \n    host=localhost          \n    user=root               \n    password=123456         \n</code></pre><ul>\n<li>\n<ol>\n<li>在线演示站点：<a href=\"http://vip.52tech.tech\">http://vip.52tech.tech</a></li>\n</ol>\n</li>\n<li>\n<ol>\n<li>对于安装和使用的过程中如果有什么问题和建议，也欢迎交流和提出建议，可以在issue去发起话题讨论，或直接联系邮箱：tech52admin@126.com</li>\n</ol>\n</li>\n</ul>\n</div>",
+            "title": "【VIP视频网站项目】基于Nodejs开发的VIP视频网站项目及源码分享【v1.0.3版】",
+            "last_reply_at": "2019-03-05T06:25:04.056Z",
+            "good": false,
+            "top": false,
+            "reply_count": 18,
+            "visit_count": 13879,
+            "create_at": "2018-09-30T12:19:59.585Z",
+            "author": {
+                "loginname": "xiugangzhang",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/29092258?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c78d55b5b8cb21491ca4e83",
+            "author_id": "55b5d4dd0b2974890124e506",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>node  v8.11.2\nchrome 72</p>\n<p>执行  npm run debug  会有下面的信息\nDebugger listening on ws://127.0.0.1:9229/4ec2286c-4b7b-4079-8cf1-2e85975ebdd6\nFor help see <a href=\"https://nodejs.org/en/docs/inspector\">https://nodejs.org/en/docs/inspector</a>\n[egg-ts-helper] create D:\\wt\\egg\\egg-example\\typings\\app\\controller\\index.d.ts\n[egg-ts-helper] create D:\\wt\\egg\\egg-example\\typings\\config\\index.d.ts\n[egg-ts-helper] create D:\\wt\\egg\\egg-example\\typings\\app\\service\\index.d.ts\n[egg-ts-helper] create D:\\wt\\egg\\egg-example\\typings\\app\\index.d.ts\n2019-03-01 14:35:46,103 INFO 15252 [master] node version v8.11.2\n2019-03-01 14:35:46,105 INFO 15252 [master] egg version 2.18.0\nDebugger listening on ws://127.0.0.1:5800/7be28063-ec07-4f03-be3e-060c3b936d85\nFor help see <a href=\"https://nodejs.org/en/docs/inspector\">https://nodejs.org/en/docs/inspector</a>\n2019-03-01 14:35:51,559 INFO 15252 [master] agent_worker#1:14396 started (5448ms)\nDebugger listening on ws://127.0.0.1:9230/6c14b5a8-d338-4ae0-9b64-370403ab5e82\nFor help see <a href=\"https://nodejs.org/en/docs/inspector\">https://nodejs.org/en/docs/inspector</a>\n9230 opened\nDebug Proxy online, now you could attach to 9999 without worry about reload.\nDevTools → chrome-devtools://devtools/bundled/inspector.html?experiments=true&amp;v8only=true&amp;ws=127.0.0.1:9999/<strong>ws_proxy</strong>\n2019-03-01 14:35:58,127 INFO 15252 [master] egg started on <a href=\"http://127.0.0.1:7001\">http://127.0.0.1:7001</a> (12021ms)</p>\n<p>在chrome 里面 打开 chrome://inspect/#devices\nTarget discovery settings  设置了下面几个\nlocalhost:9222\nlocalhost:9229\nlocalhost:9999\nlocalhost:7001</p>\n<p>然后我在chrome里面访问的 <a href=\"http://localhost:7001\">http://localhost:7001</a>\n在chrome://inspect/#devices的界面如下\n<img src=\"//static.cnodejs.org/FvgeJOwR7hhyoPQWDMikj5kIIkKM\" alt=\"1.png\">\n点击inspect   没有file://这个\n<img src=\"//static.cnodejs.org/Fmzkl7kR6LwrqqLev29MchHVvr4w\" alt=\"2.png\"></p>\n</div>",
+            "title": "egg debug 总是不成功",
+            "last_reply_at": "2019-03-05T04:19:49.248Z",
+            "good": false,
+            "top": false,
+            "reply_count": 3,
+            "visit_count": 305,
+            "create_at": "2019-03-01T06:46:51.413Z",
+            "author": {
+                "loginname": "wtcsy",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/7374706?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7df7105b8cb21491ca5fe5",
+            "author_id": "550973933135610a365b01fa",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>不知大家还记得去年我发的一个<a href=\"https://cnodejs.org/topic/5c0620c4d3b8ab334e8da79e\">帖子</a>吗？当时有了想法后，马上开始构建的一个全新的状态管理框架,我把它命名为react-control-center，随着这几个月的精心打磨，已经成长为了我最初想象的模样，也开始服务于公司的内部产品了，突然一想，后续还有好多好多改进的todo事项，</p>\n<ul>\n<li>减小包体，</li>\n<li>完成在线文档，</li>\n<li>写完index.d.ts，</li>\n<li>基于cc的中间件机制，写一个chrome 插件类似redux-dev-tool,利用immutablejs冻结state，实现状态变化过程追溯</li>\n<li>写一个cc-react-router, 把react-router整合到cc里</li>\n<li>etc</li>\n</ul>\n<hr>\n<p>至少我勇敢的迈出了第一步，期待更多的人，认识cc，基于cc的灵活且强大的api总结出自己的最佳实践，并爱上cc.\n为了让更多的初学者了解cc是什么，我写了一个在线的counter，期待你以此打开通往cc世界的大门:\n<a href=\"https://stackblitz.com/edit/dva-example-count-1saxx8\">性感的counter</a></p>\n</div>",
+            "title": "react-control-center, 最终成长为了我脑海里想象的模样",
+            "last_reply_at": "2019-03-05T04:12:00.440Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 96,
+            "create_at": "2019-03-05T04:12:00.440Z",
+            "author": {
+                "loginname": "fantasticsoul",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/7334950?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7ddd3d5b8cb21491ca5e22",
+            "author_id": "52cce7827a15a38466a94b4b",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>做宝爸快一年了，自然会花一些精力调整知识结构，关注婴幼儿成长方面的知识，现在的宝宝在营养方面普遍处于过剩状态，身边越来越常见到那种明显“富态”的宝宝，对于孩子何谓胖何谓瘦众说纷纭。</p>\n<p>为了有一个权威可靠的标准去衡量孩子的生长健康状况，我查了世界卫生组织提供的婴幼儿成长标准，标准以天为单位，提供 5 岁以内婴幼儿的身高、体重、BMI （衡量胖瘦）等指标的分布占比信息，也就是说任意天数的宝宝都能查到当下最符合健康成长规律的身高、体重、BMI 数值，也可以查到宝宝当前的成长数据处于整体样本库中的什么位置，以此衡量宝宝的成长状态，辅助纠正宝宝的喂养问题。</p>\n<p>经过一个周的开发，目前初代版本已上线，欢迎扫码体验。</p>\n<p><img src=\"//static.cnodejs.org/FlHOQHo_aogCCCAeJ6C_gxF7H0c8\" alt=\"扫码_搜索联合传播样式-标准色版.png\"></p>\n</div>",
+            "title": "为了知道孩子胖不胖，我做了一个《成长助理》小程序",
+            "last_reply_at": "2019-03-05T02:21:49.525Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 128,
+            "create_at": "2019-03-05T02:21:49.525Z",
+            "author": {
+                "loginname": "tower1229",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/4016839?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c6cfdf5e1a81129a7ad8b7f",
+            "author_id": "5c663d23f53f161dbaeb3de4",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p><strong>是《Nodejs in action》这本书吗</strong></p>\n<h4>新手求入门书籍和进阶书籍</h4>\n<blockquote>\n<p>先找到对的书， 然后拜读不是吗</p>\n</blockquote>\n<p><strong><em>求一下中文版pdf链接</em></strong></p>\n</div>",
+            "title": "狼叔说的 把《node in action》看五遍， 然后去写代码,  是认真的吗",
+            "last_reply_at": "2019-03-04T23:49:14.554Z",
+            "good": false,
+            "top": false,
+            "reply_count": 26,
+            "visit_count": 2389,
+            "create_at": "2019-02-20T07:12:53.928Z",
+            "author": {
+                "loginname": "nelhu",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/24311105?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7c92095b8cb21491ca5722",
+            "author_id": "581378c0cf18d0333412d2a2",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><ul>\n<li>公司服务器不能访问墙外网站</li>\n<li>我在公司的服务器上  build 镜像的时候出现下面的问题，求大神指点。</li>\n</ul>\n<p><em>我一直猜测是网络问题，但是我在我的一台私人国内云服务器 build 镜像并不会存在下面的问题呀。</em></p>\n<pre class=\"prettyprint\"><code>&gt; scrypt@6.0.3 install &#x2F;home&#x2F;node&#x2F;bi-nodesrv-doctor&#x2F;node_modules&#x2F;scrypt\n&gt; node-gyp rebuild\n\ngyp WARN install got an error, rolling back install\ngyp ERR! configure error \ngyp ERR! stack Error: read ECONNRESET\ngyp ERR! stack     at TLSWrap.onStreamRead (internal&#x2F;stream_base_commons.js:111:27)\ngyp ERR! System Linux 4.15.0-43-generic\ngyp ERR! command &quot;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;node&quot; &quot;&#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules&#x2F;npm&#x2F;node_modules&#x2F;node-gyp&#x2F;bin&#x2F;node-gyp.js&quot; &quot;rebuild&quot;\ngyp ERR! cwd &#x2F;home&#x2F;node&#x2F;bi-nodesrv-doctor&#x2F;node_modules&#x2F;scrypt\ngyp ERR! node -v v10.15.2\ngyp ERR! node-gyp -v v3.8.0\ngyp ERR! not ok \nnpm WARN co-mocha@1.2.2 requires a peer of mocha@&gt;=1.18 &lt;6 but none is installed. You must install peer dependencies yourself.\nnpm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.\nnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules&#x2F;fsevents):\nnpm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;linux&quot;,&quot;arch&quot;:&quot;x64&quot;})\n\nnpm ERR! code ELIFECYCLE\nnpm ERR! errno 1\nnpm ERR! scrypt@6.0.3 install: &#96;node-gyp rebuild&#96;\nnpm ERR! Exit status 1\nnpm ERR! \nnpm ERR! Failed at the scrypt@6.0.3 install script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n</code></pre></div>",
+            "title": "node-gyp rebuild 问题",
+            "last_reply_at": "2019-03-04T12:56:15.893Z",
+            "good": false,
+            "top": false,
+            "reply_count": 1,
+            "visit_count": 164,
+            "create_at": "2019-03-04T02:48:41.284Z",
+            "author": {
+                "loginname": "spursy",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/11460991?v=4&s=120"
+            }
+        },
+        {
+            "id": "532269f4d7ede09c72000a88",
+            "author_id": "4efc278625fa69ac690003c8",
+            "content": "<div class=\"markdown-text\"><p>为了减少网络传输数据量，http传输过程中会采用通用的压缩算法来压缩数据，gzip属于最常用的压缩算法。</p>\n<p>使用node的http模块发送请求时并没有帮我们进行解压，因此我们需要手动去判断gzip。</p>\n<pre class=\"prettyprint\"><code>var http = require(&#x27;http&#x27;);\nvar options = {\n hostname: &#x27;www.qq.com&#x27;,\n port: 80,\n method: &#x27;get&#x27;,\n headers: {\n  &#x27;Accept-Encoding&#x27;: &#x27;gzip&#x27;\n }\n}\n\nhttp.request(options, handler);\n\nfunction handler(responder) {\n &#x2F;&#x2F; do something\n}\n</code></pre><p>我们设置http头Accept-Encoding为gzip告诉服务器我们支持gzip压缩，服务器收到请求后，返回responder头中content-encoding带有gzip表明返回的数据为gzip压缩过的内容，node中可以通过responder.headers[‘content-encoding’]来判断服务器返回内容是否gzip压缩过。</p>\n<pre class=\"prettyprint\"><code>function handler(responder) {\n if(responder.headers[&#x27;content-encoding&#x27;].indexOf(&#x27;gzip&#x27;) != -1) {\n  &#x2F;&#x2F; 解压gzip\n }\n}\n\n</code></pre><p>已经可以判断服务器返回的是gzip压缩过的内容，接下来我们需要去解压，幸好node提供了zlib模块。</p>\n<p>我们用zlib模块来解压gzip</p>\n<pre class=\"prettyprint\"><code>var zlib = require(&#x27;zlib&#x27;);\nvar fs = require(&#x27;fs&#x27;);\nvar gunzipStream = zlib.createGunzip();\nvar toWrite = fs.createWriteStream(&#x27;qq.html&#x27;);\n</code></pre><p>zlib.createGunzip是一个transform流，通过pipe我们可以很方便解压gzip</p>\n<pre class=\"prettyprint\"><code>function handler(responder) {\n if(responder.headers[&#x27;content-encoding&#x27;].indexOf(&#x27;gzip&#x27;) != -1) {\n  responder.pipe(gunzipStream).pipe(toWrite);\n }\n}\n</code></pre><p>若是要让服务端支持gzip压缩可以先判断请求头的accept-encoding是否含有gzip</p>\n<pre class=\"prettyprint\"><code>var fs = require(&#x27;fs&#x27;);\nvar http = require(&#x27;http&#x27;);\nvar zlib = require(&#x27;zlib&#x27;);\n\nhttp.createServer(function(req, res) {\n var file = fs.createReadStream(&#x27;.&#x2F;qq.html&#x27;);\n var acceptEncoding = req.headers[&#x27;accept-encoding&#x27;];\n if(acceptEncoding &amp;&amp; acceptEncoding.indexOf(&#x27;gzip&#x27;) != -1) {\n  var gzipStream = zlib.createGzip();\n  &#x2F;&#x2F; 设置返回头content-encoding为gzip\n  res.writeHead(200, {\n   &quot;content-encoding&quot;: &quot;gzip&quot;\n  });\n  file.pipe(gzipStream).pipe(res);\n } else {\n  res.writeHead(200);\n  &#x2F;&#x2F; 不压缩\n  file.pipe(res);\n }\n}).listen(8080);\n\n</code></pre><p>使用curl测试一下</p>\n<pre class=\"prettyprint\"><code># 不带有Accept-Encoding:gzip 返回正常文本\ncurl localhost:8080\n# 带Accept-Encoding:gzip 返回压缩过的文件\ncurl -H &quot;Accept-Encoding:gzip&quot; localhost:8080\n</code></pre><p>通过zlib可以实现客户端和服务端对gzip的压缩和解压</p>\n<p>在express中提供了compress的中间件用来处理gzip</p>\n<p>引用自 <a href=\"http://wyicwx.github.io/2014/03/13/node%E4%B8%AD%E7%94%A8zlib%E8%A7%A3%E5%8E%8Bgzip/\">nodejs中用zlib解压gzip</a></p>\n</div>",
+            "title": "nodejs中用zlib解压gzip",
+            "last_reply_at": "2019-03-04T11:20:14.339Z",
+            "good": false,
+            "top": false,
+            "reply_count": 3,
+            "visit_count": 27987,
+            "create_at": "2014-03-14T02:31:16.987Z",
+            "author": {
+                "loginname": "xiaofeng748",
+                "avatar_url": "//gravatar.com/avatar/2308e232773916bebc0d468266296b6f?s=48"
+            }
+        },
+        {
+            "id": "5c5ae92be6aaad2ea76deff8",
+            "author_id": "57f2384783a4d9176a71da75",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><blockquote>\n<p>本文 context ：面向于 C 端的产品/公司；</p>\n</blockquote>\n<blockquote>\n<p>本文核心不是强调某一个岗位，而是应该“离业务更近”，“离用户更近”</p>\n</blockquote>\n<p>在现代的工业体系下，任何工作都被拆分为流水线上的一环，如今的互联网行业更是从用户那里知道他们想要什么再到实际做出来，有足足六七个环节。</p>\n<p><img src=\"https://ws3.sinaimg.cn/large/006tNc79ly1fzwukjnuwcj31220ggwey.jpg\" alt></p>\n<p>作为一个有写代码爱好的人来说，能选择的余地不多，唯有「<strong>后端工程师</strong>」和「<strong>前端工程师</strong>」，在过去的很长时间，我基本上呆在后端的领域，去做了很多后端相关的开发，自己也在后端方面有了更多的认识。</p>\n<p>在新的 2019 年，我将会尝试让自己转向，成为一个前端工程师。接下来，我来说一说我这个选择的背后逻辑。</p>\n<h2>员工的价值到底由什么决定？</h2>\n<blockquote>\n<p>白子：离客户越近，其价值就越大。</p>\n</blockquote>\n<p>提到择业，就避不开两个话题，企业的需求和员工的价值。一般来说，我们认为，<strong>员工的价值由他为企业带来的价值所决定</strong>。</p>\n<p>这句话没错，那么，员工如何为企业带来价值？</p>\n<p>员工可以帮助企业创造更好的产品，但是，<strong>这是价值么？</strong></p>\n<p>更好的产品本身并不是价值，<strong>其所带来的用户、客户才是真正的价值</strong>。</p>\n<p>员工本身并不让企业盈利，相反，企业需要支付费用给员工。而客户则是支付费用给公司，帮助企业盈利。</p>\n<p>从这个角度来看，<strong>离客户越近的人，越能产生价值</strong>，这也就是为什么我们会经常看到一个企业里，销售是赚钱最多的人，因为他们离客户最近，能够给企业带来实打实的价值。</p>\n<h2>技术背后的陷阱</h2>\n<blockquote>\n<p>白子：技术本身就是螺丝钉，只研技术，不过是一个螺丝钉，变成一个更粗的螺丝钉。</p>\n</blockquote>\n<p>关注技术本身有没有坏处？当然没有，作为一个开发者，追求技术的卓越是应有的义务。但是，从企业的角度来说，<strong>只关注技术本身，意味着你的价值会不断降低。</strong></p>\n<p>技术再强，也是可以找到替代者的，区别仅仅是愿不愿意花那么多钱罢了。业务理解的深度，却是其他人无法轻易替代的。江山代有才人出，各领风骚数百年，技术迭代速度非常快，总会有新人出来，比你更加擅长技术。</p>\n<h2>为什么是前端不是后端</h2>\n<blockquote>\n<p>白子：如今的前端更加接近业务本身，更具备价值</p>\n</blockquote>\n<p>随着现代软件产品的高度流水线化，我们推崇的<strong>前后端分离、RESTFul API、GraphQL 让后端的工作越来越轻松</strong>，可以花费更多的精力投放在技术深度的探索，去研究更加深层次的优化问题，而不需要花费更多的心思在业务逻辑上去。</p>\n<p>同样的，<strong>前端不得不承担起业务流程的开发，工作量大大加大</strong>。虽然有各种各样的组件库帮助前端优化了具体布局、界面上面的工作，<strong>但业务流程本身的复杂度并不会因为组件库的引入而简化</strong>。</p>\n<p>在这种强前端重后端的模式下，前端承担了原本是后端的工作，让后端不再需要去理解业务逻辑，更加关注技术本身的内容就可以了。<strong>离业务越来越远，使得后端的话语权越来越小。</strong></p>\n<h2>游刃有余的前端</h2>\n<p><strong>前端工程师本身负责的是客户可以看见的内容，这使得他们相比于后端工程师，有着更多的职业选择</strong>。</p>\n<p>他们了解用户交互体验，可以从开发转换成为用户研究</p>\n<p>他们了解用户使用方法，可以从开发转换成为销售</p>\n<p>他们了解用户使用路径，可以从开发转换成为产品经理</p>\n<p><strong>而后端，由于专精于技术，其职业选择，也不过是从一门技术，转为另外一门技术罢了。</strong></p>\n</div>",
+            "title": "离用户近一点，再近一点",
+            "last_reply_at": "2019-03-04T10:26:43.128Z",
+            "good": false,
+            "top": false,
+            "reply_count": 5,
+            "visit_count": 902,
+            "create_at": "2019-02-06T14:03:23.234Z",
+            "author": {
+                "loginname": "bestony",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/13283837?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c75f39cab86b86ddf6b32a5",
+            "author_id": "58d140302c8bf2a836456213",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p><strong>摘要：</strong> 最新的JS特性。</p>\n<ul>\n<li>原文：<a href=\"https://segmentfault.com/a/1190000018311280\">ES10 特性的完整指南</a></li>\n<li>作者：<a href=\"https://segmentfault.com/a/1190000017794020\">前端小智</a></li>\n</ul>\n<p><strong><a href=\"https://www.fundebug.com/\">Fundebug</a>经授权转载，版权归原作者所有。</strong></p>\n<p><img src=\"https://image.fundebug.com/2019-02-26-01.png\" alt></p>\n<p>ES10 还只是一个草案。但是除了 <code>Object.fromEntries</code> 之外，Chrome 的大多数功能都已经实现了，为什么不早点开始探索呢?当所有浏览器都开始支持它时，你将走在前面，这只是时间问题。</p>\n<p>在新的语言特性方面，ES10 不如 ES6 重要，但它确实添加了一些有趣的特性(其中一些功能目前还无法在浏览器中工作: 2019/02/21)</p>\n<p>在 ES6 中，箭头函数无疑是最受欢迎的新特性，在 ES10 中会是什么呢?</p>\n<ul>\n<li>String .matchAll()</li>\n<li>Dynamic import()</li>\n<li>Array .flat() .flatMap()</li>\n<li>Object .fromEntries()</li>\n<li>String .trimStart() .trimEnd()</li>\n<li>well-formed JSON.stringify()</li>\n<li>stable Array .sort()</li>\n<li>new Function .toString()</li>\n<li>Standardized globalThis object</li>\n</ul>\n<h3>BigInt：任意精度整数</h3>\n<p><strong>BigInt</strong> 是第七种 <strong>原始类型。</strong></p>\n<p>BigInt 是一个任意精度的整数。这意味着变量现在可以 <code>表示²⁵³</code> 数字，而不仅仅是<code>9007199254740992</code>。</p>\n<pre class=\"prettyprint language-javascript\"><code>const b = 1n;  &#x2F;&#x2F; 追加 n 以创建 BigInt\n</code></pre><p>在过去，不支持大于 <code>9007199254740992</code> 的整数值。如果超过，该值将锁定为 <code>MAX_SAFE_INTEGER + 1</code>:</p>\n<pre class=\"prettyprint language-javascript\"><code>const limit = Number.MAX_SAFE_INTEGER;\n⇨ 9007199254740991\nlimit + 1;\n⇨ 9007199254740992\nlimit + 2;\n⇨ 9007199254740992 &lt;--- MAX_SAFE_INTEGER + 1 exceeded\nconst larger = 9007199254740991n;\n⇨ 9007199254740991n\nconst integer = BigInt(9007199254740991); &#x2F;&#x2F; initialize with number\n⇨ 9007199254740991n\nconst same = BigInt(&quot;9007199254740991&quot;); &#x2F;&#x2F; initialize with &quot;string&quot;\n⇨ 9007199254740991n\n</code></pre><h4>typeof</h4>\n<pre class=\"prettyprint language-javascript\"><code>typeof 10;\n⇨ &#x27;number&#x27;\ntypeof 10n;\n⇨ &#x27;bigint&#x27;\n</code></pre><h4>等于运算符可用于两种类型之间比较</h4>\n<pre class=\"prettyprint language-javascript\"><code>10n === BigInt(10);\n⇨ true\n10n == 10;\n⇨ true\n</code></pre><h4>数学运算符只能在自己的类型中工作</h4>\n<pre class=\"prettyprint language-javascript\"><code>200n &#x2F; 10n\n⇨ 20n\n200n &#x2F; 20\n⇨ Uncaught TypeError:\n   Cannot mix BigInt and other types, use explicit conversions &lt;\n</code></pre><h4>－运算符可以操作， + 不可用</h4>\n<pre class=\"prettyprint language-javascript\"><code>-100n\n⇨ -100n\n+100n\n⇨ Uncaught TypeError:\n  Cannot convert a BigInt value to a number\n</code></pre><p>当你读到这篇文章的时候，<strong>matchAll</strong> 可能已经在 Chrome C73 中正式实现了——如果不是，它仍然值得一看。特别是如果你是一个正则表达式(<strong>regex</strong>)爱好者。</p>\n<h3>string.prototype.matchAll()</h3>\n<p>如果您运行谷歌搜索<strong>JavaScript string match all</strong>，第一个结果将是这样的：如何编写正则表达式“match all”？</p>\n<p>最佳结果将建议 <strong>String.match</strong> 与正则表达式和 <strong>/g</strong> 一起使用或者带有 <strong>/g</strong> 的 <strong>RegExp.exec</strong> 或者带有 <strong>/g</strong> 的 <strong>RegExp.test</strong> 。</p>\n<p>首先，让我们看看旧规范是如何工作的。</p>\n<p>带字符串参数的 <strong>String.match</strong> 仅返回第一个匹配：</p>\n<pre class=\"prettyprint language-javascript\"><code>let string = &#x27;Hello&#x27;;\nlet matches = string.match(&#x27;l&#x27;);\nconsole.log(matches[0]); &#x2F;&#x2F; &quot;l&quot;\n</code></pre><p>结果是单个 <code>&quot;l&quot;</code>（注意：匹配存储在 matches[0] 中而不是 matches）</p>\n<p>在<code>“hello”</code>中搜索 <code>&quot;l&quot;</code> 只返回 <code>&quot;l&quot;</code>。</p>\n<p>将 <strong>string.match</strong> 与 <strong>regex</strong> 参数一起使用也是如此：</p>\n<p>让我们使用正则表达式 <code>/l/</code> 找到字符 串“hello” 中的 <code>“l”</code> 字符：</p>\n<pre class=\"prettyprint language-javascript\"><code>let string = &quot;Hello&quot;;\nlet matches = string.match(&#x2F;l&#x2F;);\nconsole.log(matches[0]); &#x2F;&#x2F; &quot;l&quot;\n</code></pre><h4>添加 /g 混合</h4>\n<pre class=\"prettyprint language-javascript\"><code>let string = &quot;Hello&quot;;\nlet ret = string.match(&#x2F;l&#x2F;g); &#x2F;&#x2F; (2) [“l”, “l”];\n</code></pre><p>很好，我们使用 &lt; ES10 方式得到了多个匹配，它一直起作用。</p>\n<p>那么为什么要使用全新的 <strong>matchAll</strong> 方法呢? 在我们更详细地回答这个问题之前，让我们先来看看 <strong>捕获组</strong>。如果不出意外，你可能会学到一些关于正则表达式的新知识。</p>\n<h4>正则表达式捕获组</h4>\n<p>在 regex 中捕获组只是从 <strong>()</strong> 括号中提取一个模式，可以使用 <strong>/regex/.exec(string)</strong> 和<strong>string.match</strong> 捕捉组。</p>\n<p>常规捕获组是通过将模式包装在 <strong>(pattern)</strong> 中创建的，但是要在结果对象上创建 <code>groups</code> 属性，它是: <code>(?&lt;name&gt;pattern)</code>。</p>\n<p>要创建一个新的组名，只需在括号内附加 <strong>?&lt;name&gt;</strong>，结果中，分组 (pattern) 匹配将成为 <strong><a href=\"http://group.name\">group.name</a></strong>，并附加到 <strong>match</strong>对象，以下是一个实例：</p>\n<p>字符串标本匹配：</p>\n<p><img src=\"https://image.fundebug.com/2019-02-26-02.png\" alt></p>\n<p>这里创建了 match.groups.<strong>color</strong> 和 match.groups.<strong>bird</strong> ：</p>\n<pre class=\"prettyprint language-javascript\"><code>const string = &#x27;black*raven lime*parrot white*seagull&#x27;;\nconst regex = &#x2F;(?&lt;color&gt;.*?)\\*(?&lt;bird&gt;[a-z0-9]+)&#x2F;g;\nwhile (match = regex.exec(string))\n{\n    let value = match[0];\n    let index = match.index;\n    let input = match.input;\n    console.log(&#96;${value} at ${index} with &#x27;${input}&#x27;&#96;);\nconsole.log(match.groups.color);\n    console.log(match.groups.bird);\n}\n</code></pre><p>需要多次调用 <strong>regex.exec</strong> 方法来遍历整个搜索结果集。 在每次迭代期间调用**.exec** 时，将显示下一个结果（它不会立即返回所有匹配项。），因此使用 <strong>while</strong> 循环。</p>\n<p>输出如下：</p>\n<pre class=\"prettyprint language-javascript\"><code>black*raven at 0 with &#x27;black*raven lime*parrot white*seagull&#x27;\nblack\nraven\nlime*parrot at 11 with &#x27;black*raven lime*parrot white*seagull&#x27;\nlime\nparrot\nwhite*seagull at 23 with &#x27;black*raven lime*parrot white*seagull&#x27;\nwhite\nseagull\n</code></pre><p><strong>但奇怪的是:</strong></p>\n<blockquote>\n<p>如果你从这个正则表达式中删除 <strong>/g</strong>，你将永远在第一个结果上创建一个无限循环。这在过去是一个巨大的痛苦。想象一下，从某个数据库接收正则表达式时，你不确定它的末尾是否有 <strong>/g</strong>，你得先检查一下。</p>\n</blockquote>\n<h4><strong>使用 .matchAll() 的好理由</strong></h4>\n<ol>\n<li>在与捕获组一起使用时，它可以<strong>更加优雅</strong>,捕获组只是使用 <strong>()</strong> 提取模式的正则表达式的一部分。</li>\n<li>它<strong>返回一个迭代器而</strong>不是一个数组，迭代器本身是有用的。</li>\n<li>迭代器可以使用扩展运算符 (…) 转换为数组。</li>\n<li>它避免了带有 <strong>/g</strong> 标志的正则表达式，当从数据库或外部源检索未知正则表达式并与陈旧的<strong>RegEx</strong> 对象一起使用时，它非常有用。</li>\n<li>使用 <strong>RegEx</strong> 对象创建的正则表达式不能使用点 <strong>(.)</strong> 操作符链接。</li>\n<li>高级: <strong>RegEx</strong> 对象更改跟踪最后匹配位置的内部 <strong>.lastindex</strong> 属性，这在复杂的情况下会造成严重破坏。</li>\n</ol>\n<h4>.matchAll() 是如何工作的?</h4>\n<p>让我们尝试匹配单词 <code>hello</code> 中字母 <code>e</code> 和 <code>l</code> 的所有实例， 因为返回了迭代器，所以可以使用 <strong>for…of</strong> 循环遍历它：</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x2F;&#x2F; Match all occurrences of the letters: &quot;e&quot; or &quot;l&quot; \nlet iterator = &quot;hello&quot;.matchAll(&#x2F;[el]&#x2F;);\nfor (const match of iterator)\n    console.log(match);\n</code></pre><p>这一次你可以跳过 <strong>/g</strong>， <code>.matchall</code> 方法不需要它，结果如下:</p>\n<pre class=\"prettyprint language-javascript\"><code>[ &#x27;e&#x27;, index: 1, input: &#x27;hello&#x27; ] &#x2F;&#x2F; Iteration 1\n[ &#x27;l&#x27;, index: 2, input: &#x27;hello&#x27; ] &#x2F;&#x2F; Iteration 2\n[ &#x27;l&#x27;, index: 3, input: &#x27;hello&#x27; ] &#x2F;&#x2F; Iteration 3\n</code></pre><h4>使用 .matchAll() 捕获组示例：</h4>\n<p><strong>.matchAll</strong> 具有上面列出的所有好处。它是一个迭代器，可以用 <strong>for…of</strong> 循环遍历它,这就是整个语法的不同。</p>\n<pre class=\"prettyprint language-javascript\"><code>const string = &#x27;black*raven lime*parrot white*seagull&#x27;;\nconst regex = &#x2F;(?&lt;color&gt;.*?)\\*(?&lt;bird&gt;[a-z0-9]+)&#x2F;;\nfor (const match of string.matchAll(regex)) {\n    let value = match[0];\n    let index = match.index;\n    let input = match.input;\n    console.log(&#96;${value} at ${index} with &#x27;${input}&#x27;&#96;);\nconsole.log(match.groups.color);\n    console.log(match.groups.bird);\n}\n</code></pre><p>请注意已经没有 <strong>/g</strong> 标志，因为 <strong>.matchAll()</strong> 已经包含了它，打印如下：</p>\n<pre class=\"prettyprint language-javascript\"><code>black*raven at 0 with &#x27;black*raven lime*parrot white*seagull&#x27;\nblack\nraven\nlime*parrot at 11 with &#x27;black*raven lime*parrot white*seagull&#x27;\nlime\nparrot\nwhite*seagull at 23 with &#x27;black*raven lime*parrot white*seagull&#x27;\nwhite\nseagull\n</code></pre><p>也许在美学上它与原始正则表达式非常相似，执行while循环实现。但是如前所述，由于上面提到的许多原因，这是更好的方法，移除 <strong>/g</strong> 不会导致无限循环。</p>\n<h3>动态导入</h3>\n<p>现在可以将导入分配给变量：</p>\n<pre class=\"prettyprint language-javascript\"><code>element.addEventListener(&#x27;click&#x27;, async() =&gt; {\n  const module = await import(&#96;.&#x2F;api-scripts&#x2F;button-click.js&#96;);\n  module.clickEvent();\n})\n</code></pre><h3>Array.flat()</h3>\n<p>扁平化多维数组：</p>\n<pre class=\"prettyprint language-javascript\"><code>let multi = [1,2,3,[4,5,6,[7,8,9,[10,11,12]]]];\nmulti.flat();               &#x2F;&#x2F; [1,2,3,4,5,6,Array(4)]\nmulti.flat().flat();        &#x2F;&#x2F; [1,2,3,4,5,6,7,8,9,Array(3)]\nmulti.flat().flat().flat(); &#x2F;&#x2F; [1,2,3,4,5,6,7,8,9,10,11,12]\nmulti.flat(Infinity);       &#x2F;&#x2F; [1,2,3,4,5,6,7,8,9,10,11,12]\n</code></pre><h3>Array.flatMap()</h3>\n<pre class=\"prettyprint language-javascript\"><code>let array = [1, 2, 3, 4, 5];\narray.map(x =&gt; [x, x * 2]);\n\n\nlet array = [1, 2, 3, 4, 5];\narray.map(x =&gt; [x, x * 2]);\n</code></pre><p>结果：</p>\n<pre class=\"prettyprint language-javascript\"><code>[Array(2), Array(2), Array(2), Array(2), Array(2)]\n0: (2) [1, 2]\n1: (2) [2, 4]\n2: (2) [3, 6]\n3: (2) [4, 8]\n4: (2) [5, 10]\n</code></pre><p>使用 <code>flatMap</code> 方法：</p>\n<pre class=\"prettyprint language-javascript\"><code>array.flatMap(v =&gt; [v, v * 2]);\n[1, 2, 2, 4, 3, 6, 4, 8, 5, 10]\n</code></pre><h3>Object.fromEntries()</h3>\n<p>将键值对列表转换为对象:</p>\n<pre class=\"prettyprint language-javascript\"><code>let obj = { apple : 10, orange : 20, banana : 30 };\nlet entries = Object.entries(obj);\nentries;\n(3) [Array(2), Array(2), Array(2)]\n 0: (2) [&quot;apple&quot;, 10]\n 1: (2) [&quot;orange&quot;, 20]\n 2: (2) [&quot;banana&quot;, 30]\nlet fromEntries = Object.fromEntries(entries);\n{ apple: 10, orange: 20, banana: 30 }\n</code></pre><h3>String.trimStart() 与 String.trimEnd()</h3>\n<pre class=\"prettyprint language-javascript\"><code>let greeting = &quot;     Space around     &quot;;\ngreeting.trimEnd();   &#x2F;&#x2F; &quot;     Space around&quot;;\ngreeting.trimStart(); &#x2F;&#x2F; &quot;Space around     &quot;;\n</code></pre><h3>格式良好的 JSON.stringify()</h3>\n<p>此更新修复了字符 <strong>U+D800</strong> 到 <strong>U+DFFF</strong> 的处理，有时可以进入 JSON 字符串。 这可能是一个问题，因为 <strong>JSON.stringify</strong>可能会将这些数字格式化为没有等效 UTF-8 字符的值, 但 JSON 格式需要 <code>UTF-8</code> 编码。</p>\n<p>解析方法使用格式良好的JSON字符串，如:</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x27;{ “prop1” : 1, &quot;prop2&quot; : 2 }&#x27;; &#x2F;&#x2F; A well-formed JSON format string\n</code></pre><p>注意，要创建正确 JSON 格式的字符串，绝对需要在属性名周围加上双引号。缺少或任何其他类型的引号都不会生成格式良好的JSON。</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x27;{ “prop1” : 1, &quot;meth&quot; : () =&gt; {}}&#x27;; &#x2F;&#x2F; Not JSON format string\n</code></pre><p>JSON 字符串格式与 <strong>Object Literal</strong> 不同，后者看起来几乎一样，但可以使用任何类型的引号括住属性名，也可以包含方法(JSON格式不允许使用方法):</p>\n<pre class=\"prettyprint language-javascript\"><code>let object_literal = { property: 1, meth: () =&gt; {} };\n\n</code></pre><p>不管怎样，一切似乎都很好。第一个示例看起来是兼容的。但它们也是简单的例子，大多数情况下都能顺利地工作!</p>\n<h4>U+2028 和 U+2029 字符</h4>\n<p>问题是， ES10 之前的 EcmaScript 实际上并不完全支持 JSON 格式。前 ES10 时代不接受未转义行分隔符 <strong>U+2028 和</strong>段落分隔符 <strong>U+2029</strong> 字符:</p>\n<p><img src=\"https://image.fundebug.com/2019-02-26-03.png\" alt></p>\n<p><img src=\"https://image.fundebug.com/2019-02-26-04.png\" alt></p>\n<h4>对于 U+D800 - U+DFFF 之间的所有字符也是如此</h4>\n<p>如果这些字符潜入 JSON 格式的字符串(假设来自数据库记录)，你可能会花费数小时试图弄清楚为什么程序的其余部分会产生解析错误。</p>\n<p>因此，如果你传递 <strong>eval</strong> 这样的字符串 <code>“console.log(' hello ')”</code>，它将执行 JavaScript语句 (通过尝试将字符串转换为实际代码),也类似于 <strong>JSON.parse</strong> 将处理你的 JSON 字符串的方式。</p>\n<h3>稳定的 Array.prototype.sort()</h3>\n<p><strong>V8</strong> 之前的实现对包含10个以上项的数组使用了一种<strong>不稳定</strong>的快速排序算法。</p>\n<blockquote>\n<p>一个稳定的排序算法是当两个键值相等的对象在排序后的输出中出现的顺序与在未排序的输入中出现的顺序相同时。</p>\n</blockquote>\n<p>但情况不再是这样了，ES10 提供了一个稳定的数组排序:</p>\n<pre class=\"prettyprint language-javascript\"><code>var fruit = [\n    { name: &quot;Apple&quot;,      count: 13, },\n    { name: &quot;Pear&quot;,       count: 12, },\n    { name: &quot;Banana&quot;,     count: 12, },\n    { name: &quot;Strawberry&quot;, count: 11, },\n    { name: &quot;Cherry&quot;,     count: 11, },\n    { name: &quot;Blackberry&quot;, count: 10, },\n    { name: &quot;Pineapple&quot;,  count: 10, }\n];\n&#x2F;&#x2F; 创建排序函数:\nlet my_sort = (a, b) =&gt; a.count - b.count;\n&#x2F;&#x2F; 执行稳定的ES10排序:\nlet sorted = fruit.sort(my_sort);\nconsole.log(sorted);\n</code></pre><p>控制台输出(项目以相反的顺序出现):</p>\n<p><img src=\"https://image.fundebug.com/2019-02-26-05.png\" alt></p>\n<p><strong>代码部署后可能存在的BUG没法实时知道，事后为了解决这些BUG，花了大量的时间进行log 调试，这边顺便给大家推荐一个好用的BUG监控工具 <a href=\"https://www.fundebug.com/?utm_source=xiaozhi\">Fundebug</a>。</strong></p>\n<h3>新的Function.toString()</h3>\n<p>函数是对象，并且每个对象都有一个 <strong>.toString()</strong> 方法，因为它最初存在于<strong>Object.prototype.toString()</strong> 上。 所有对象（包括函数）都是通过基于原型的类继承从它继承的。</p>\n<p>这意味着我们以前已经有 <strong>funcion.toString()</strong> 方法了。</p>\n<p>但是 ES10 进一步尝试标准化所有对象和内置函数的字符串表示。 以下是各种新案例：</p>\n<h4>典型的例子</h4>\n<pre class=\"prettyprint language-javascript\"><code>function () { console.log(&#x27;Hello there.&#x27;); }.toString();\n</code></pre><p><strong>控制台输出(函数体的字符串格式:)</strong></p>\n<pre class=\"prettyprint language-javascript\"><code>⇨ function () { console.log(&#x27;Hello there.&#x27;); }\n</code></pre><p>下面是剩下的例子:</p>\n<h4>直接在方法名 .toString()</h4>\n<pre class=\"prettyprint language-javascript\"><code>Number.parseInt.toString();\n⇨ function parseInt() { [native code] }\n</code></pre><h4>绑定上下文</h4>\n<pre class=\"prettyprint language-javascript\"><code>function () { }.bind(0).toString();\n⇨ function () { [native code] }\n</code></pre><h4>内置可调用函数对象</h4>\n<pre class=\"prettyprint language-javascript\"><code>Symbol.toString();\n⇨ function Symbol() { [native code] }\n</code></pre><h4>动态生成的函数</h4>\n<pre class=\"prettyprint language-javascript\"><code>function* () { }.toString();\n⇨ function* () { }\n</code></pre><h4>prototype.toString</h4>\n<pre class=\"prettyprint language-javascript\"><code>Function.prototype.toString.call({});\n⇨ Function.prototype.toString requires that &#x27;this&#x27; be a Function&quot;\n</code></pre><h3>可选的 Catch Binding</h3>\n<p>在过去，<strong>try/catch</strong> 语句中的 <strong>catch</strong> 语句需要一个变量。 <strong>try/catch</strong> 语句帮助捕获终端级别的错误:</p>\n<pre class=\"prettyprint language-javascript\"><code>try {\n    &#x2F;&#x2F; Call a non-existing function undefined_Function\n    undefined_Function(&quot;I&#x27;m trying&quot;);\n}\ncatch(error) {\n    &#x2F;&#x2F; Display the error if statements inside try above fail\n    console.log( error ); &#x2F;&#x2F; undefined_Function is undefined\n}\n</code></pre><p>在某些情况下，所需的<strong>错误</strong>变量是未使用的:</p>\n<pre class=\"prettyprint language-javascript\"><code>try {\n    JSON.parse(text); &#x2F;&#x2F; &lt;--- this will fail with &quot;text not defined&quot;\n    return true; &lt;--- exit without error even if there is one\n}\ncatch (redundant_sometmes) &lt;--- this makes error variable redundant\n{\n    return false;\n}\n</code></pre><p>编写此代码的人通过尝试强制 <code>true</code> 退出 <strong>try</strong> 子句。但是，这并不是实际发生的情况</p>\n<pre class=\"prettyprint language-javascript\"><code>(() =&gt; {\n    try {\n        JSON.parse(text)\n        return true\n    } catch(err) {\n        return false\n    }\n})()\n=&gt; false\n</code></pre><h4>在 ES10 中，捕获错误的变量是可选的</h4>\n<p>现在可以跳过错误变量:</p>\n<pre class=\"prettyprint language-javascript\"><code>try {\n    JSON.parse(text);\n    return true;\n}\ncatch\n{\n    return false;\n}\n</code></pre><p>目前还无法测试上一个示例中的 <strong>try</strong> 语句的结果，但一旦它出来，我将更新这部分。</p>\n<h3>标准化 globalThis 对象</h3>\n<p>这在ES10之前， globalThis 还没有标准化。</p>\n<p>在产品代码中，你可以自己编写这个怪物，在多个平台上“标准化”它:</p>\n<pre class=\"prettyprint language-javascript\"><code>var getGlobal = function () {\n    if (typeof self !== &#x27;undefined&#x27;) { return self; }\n    if (typeof window !== &#x27;undefined&#x27;) { return window; }\n    if (typeof global !== &#x27;undefined&#x27;) { return global; }\n    throw new Error(&#x27;unable to locate global object&#x27;);\n};\n</code></pre><p>但即使这样也不总是奏效。因此，ES10 添加了 <strong>globalThis</strong> 对象，从现在开始，该对象用于在任何平台上访问全局作用域:</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x2F;&#x2F; 访问全局数组构造函数\nglobalThis.Array(0, 1, 2);\n⇨ [0, 1, 2]\n\n&#x2F;&#x2F; 类似于 ES5 之前的 window.v = { flag: true }\nglobalThis.v = { flag: true };\n\nconsole.log(globalThis.v);\n⇨ { flag: true }\n</code></pre><h3>Symbol.description</h3>\n<p><code>description</code> 是一个只读属性，它返回 <strong>Symbol</strong> 对象的可选描述。</p>\n<pre class=\"prettyprint language-javascript\"><code>let mySymbol = &#x27;My Symbol&#x27;;\nlet symObj = Symbol(mySymbol);\nsymObj; &#x2F;&#x2F; Symbol(My Symbol)\nsymObj.description; &#x2F;&#x2F; &quot;My Symbol&quot;\n</code></pre><h3>Hashbang 语法</h3>\n<p>也就是 unix 用户熟悉的 <strong>shebang</strong>。它指定一个解释器(什么将执行JavaScript文件?)。</p>\n<p>ES10标准化，我不会对此进行详细介绍，因为从技术上讲，这并不是一个真正的语言特性，但它基本上统一了 JavaScript 在服务器端的执行方式。</p>\n<pre class=\"prettyprint language-bash\"><code>$ .&#x2F;index.js\n</code></pre><p>代替</p>\n<pre class=\"prettyprint language-bash\"><code>$ node index.js\n</code></pre><h3>ES10类: private、static 和 公共成员</h3>\n<p><strong>新的语法字符 #octothorpe（hash tag）现在用于直接在类主体的范围内定义变量，函数，getter 和 setter …以及构造函数和类方法。</strong></p>\n<p>下面是一个毫无意义的例子，它只关注新语法:</p>\n<pre class=\"prettyprint language-javascript\"><code>class Raven extends Bird {\n#state = { eggs: 10};\n&#x2F;&#x2F; getter\n    get #eggs() { \n        return state.eggs;\n    }\n&#x2F;&#x2F; setter\n    set #eggs(value) {\n        this.#state.eggs = value;\n    }\n#lay() {\n        this.#eggs++;\n    }\nconstructor() {\n        super();\n        this.#lay.bind(this);\n    }\n#render() {\n        &#x2F;* paint UI *&#x2F;\n    }\n}\n</code></pre><p>老实说，我认为这会让语言更难读。</p>\n<p><strong>原文：</strong><a href=\"https://medium.freecodecamp.org/the-complete-guide-to-es10-features-5fd0feb9513a\">The Complete Guide to ES10 Features</a></p>\n<h3>关于Fundebug</h3>\n<p><a href=\"https://www.fundebug.com/\">Fundebug</a>专注于JavaScript、微信小程序、微信小游戏、支付宝小程序、React Native、Node.js和Java线上应用实时BUG监控。 自从2016年双十一正式上线，Fundebug累计处理了10亿+错误事件，付费客户有Google、360、金山软件、百姓网等众多品牌企业。欢迎大家<a href=\"https://www.fundebug.com/team/create\">免费试用</a>！</p>\n<p><img src=\"https://static.fundebug.cn/wechat_slogan.png\" alt></p>\n</div>",
+            "title": "ES10特性详解",
+            "last_reply_at": "2019-03-04T10:12:42.613Z",
+            "good": false,
+            "top": false,
+            "reply_count": 3,
+            "visit_count": 936,
+            "create_at": "2019-02-27T02:19:08.224Z",
+            "author": {
+                "loginname": "Fundebug",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/26496557?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c1f043f76c4964062a1ca84",
+            "author_id": "58130d10b37ee8fb339788cf",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><h2>当然不！</h2>\n<p>但是你了解【<a href=\"https://www.aliyun.com/product/ots\">表格存储（TableStore）</a>】吗?</p>\n<p>这里为大家介绍一款<strong>PB量级的NoSQL</strong>：表格存储（TableStore，原名OTS）是<strong>阿里云自研分布式多模型NoSQL数据库</strong>，支持多种数据模型（包含宽行、消息、时序、时空等），满足不同应用场景的需求。</p>\n<p>TableStore是基于共享存储的<strong>高性能、低成本、易扩展、全托管的半结构化数据存储平台</strong>，支撑互联网和物联网数据的高效计算与分析。</p>\n<h1>看一看如何轻松：</h1>\n<h2>打造《<strong>亿量级</strong>订单系统》：</h2>\n<p><a href=\"https://ots.console.aliyun.com/index#/demo/cn-hangzhou/order\">样例：</a><a href=\"https://ots.console.aliyun.com/index#/demo/cn-hangzhou/order\">https://ots.console.aliyun.com/index#/demo/cn-hangzhou/order</a>\n<a href=\"https://cnodejs.org/topic/5c35fcdd3898674067a7d53d\">文章：</a><a href=\"https://cnodejs.org/topic/5c35fcdd3898674067a7d53d\">https://cnodejs.org/topic/5c35fcdd3898674067a7d53d</a></p>\n<h2>打造《<strong>亿量级</strong>店铺搜索》：</h2>\n<p><a href=\"https://ots.console.aliyun.com/index#/demo/cn-hangzhou/geo\">样例：</a><a href=\"https://ots.console.aliyun.com/index#/demo/cn-hangzhou/geo\">https://ots.console.aliyun.com/index#/demo/cn-hangzhou/geo</a>\n<a href=\"https://cnodejs.org/topic/5c3c781f3898674067a7f10e\">文章：</a><a href=\"https://cnodejs.org/topic/5c3c781f3898674067a7f10e\">https://cnodejs.org/topic/5c3c781f3898674067a7f10e</a></p>\n<p><img src=\"//static.cnodejs.org/Fmun03yK3aj-SdLF8aq651sHxX1b\" alt=\"image.png\"></p>\n<p>======\n大家来说说，node用户为什么比较热衷mongodb？</p>\n</div>",
+            "title": "node用户只会使用mongodb吗？",
+            "last_reply_at": "2019-03-04T09:14:01.930Z",
+            "good": false,
+            "top": false,
+            "reply_count": 14,
+            "visit_count": 1573,
+            "create_at": "2018-12-23T03:42:55.445Z",
+            "author": {
+                "loginname": "wangtantan",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/16631445?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c78ad965b8cb21491ca4d1a",
+            "author_id": "5907703b5bb7efe417431f27",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>就像 <a href=\"https://play.golang.org/\">https://play.golang.org/</a> 这样的，如何实现出来</p>\n</div>",
+            "title": "如何制做在线编译代码的网站？",
+            "last_reply_at": "2019-03-04T09:04:39.845Z",
+            "good": false,
+            "top": false,
+            "reply_count": 6,
+            "visit_count": 482,
+            "create_at": "2019-03-01T03:57:10.387Z",
+            "author": {
+                "loginname": "chanywn",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/28001537?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7c8afc90c14711cc8c9dc7",
+            "author_id": "58d140302c8bf2a836456213",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p><strong>摘要：</strong> Webpack骚操作。</p>\n<ul>\n<li>原文：<a href=\"https://segmentfault.com/a/1190000018368885\">Web 性能优化： 使用 Webpack 分离数据的正确方法</a></li>\n<li>作者：<a href=\"https://segmentfault.com/a/1190000017794020\">前端小智</a></li>\n</ul>\n<p><strong><a href=\"https://www.fundebug.com/\">Fundebug</a>经授权转载，版权归原作者所有。</strong></p>\n<p>制定向用户提供文件的最佳方式可能是一项棘手的工作。 有很多不同的场景，不同的技术，不同的术语。</p>\n<p>在这篇文章中，我希望给你所有你需要的东西，这样你就可以:</p>\n<ol>\n<li>了解哪种文件分割策略最适合你的网站和用户</li>\n<li>知道怎么做</li>\n</ol>\n<p>根据 <a href=\"https://webpack.js.org/glossary/\">Webpack glossary</a>，有两种不同类型的文件分割。 这些术语听起来可以互换，但显然不是。</p>\n<p>Webpack 文件分离包括两个部分，一个是 Bundle splitting，一个是 Code splitting:</p>\n<ul>\n<li><strong>Bundle splitting</strong>: 创建更多更小的文件，并行加载，以获得更好的缓存效果，主要作用就是使浏览器并行下载，提高下载速度。并且运用浏览器缓存，只有代码被修改，文件名中的哈希值改变了才会去再次加载。</li>\n<li><strong>Code splitting</strong>：只加载用户最需要的部分，其余的代码都遵从懒加载的策略，主要的作用就是加快页面的加载速度，不加载不必要的代码。</li>\n</ul>\n<p>第二个听起来更吸引人，不是吗?事实上，关于这个问题的许多文章似乎都假设这是制作更小的JavaScript 文件的惟一值得的情况。</p>\n<p>但我在这里要告诉你的是，第一个在很多网站上都更有价值，应该是你为所有网站做的第一件事。</p>\n<p>就让我们一探究竟吧。</p>\n<h3>Bundle splitting</h3>\n<p>bundle splitting 背后的思想非常简单，如果你有一个巨大的文件，并且更改了一行代码，那么用户必须再次下载整个文件。但是如果将其分成两个文件，那么用户只需要下载更改的文件，浏览器将从缓存中提供另一个文件。</p>\n<p>值得注意的是，由于 bundle splitting 都是关于缓存的，所以对于第一次访问来说没有什么区别。</p>\n<p>(我认为太多关于性能的讨论都是关于第一次访问一个站点，或许部分原因是“第一印象很重要”，部分原因是它很好、很容易衡量。</p>\n<p>对于经常访问的用户来说，量化性能增强所带来的影响可能比较棘手，但是我们必须进行量化!</p>\n<p>这将需要一个电子表格，因此我们需要锁定一组非常特定的环境，我们可以针对这些环境测试每个缓存策略。</p>\n<p>这是我在前一段中提到的情况:</p>\n<ul>\n<li>Alice 每周访问我们的网站一次，持续 10 周</li>\n<li>我们每周更新一次网站</li>\n<li>我们每周都会更新我们的“产品列表”页面</li>\n<li>我们也有一个“产品详细信息”页面，但我们目前还没有开发</li>\n<li>在第 5 周，我们向站点添加了一个新的 npm 包</li>\n<li>在第 8 周，我们更新了一个现有的 npm 包</li>\n</ul>\n<p>某些类型的人(比如我)会尝试让这个场景尽可能的真实。不要这样做。实际情况并不重要，稍后我们将找出原因。</p>\n<h3>基线</h3>\n<p>假设我们的 JavaScript 包的总容量是400 KB，目前我们将它作为一个名为 <code>main.js</code> 的文件加载。</p>\n<p>我们有一个 Webpack 配置如下(我省略了一些无关的配置):</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x2F;&#x2F; webpack.config.js \n\nconst path = require(&#x27;path&#x27;)\n\nmodule.exports = {\n  entry: path.resolve(__dirame, &#x27;src&#x2F;index.js&#x27;)\n  output: {\n    path: path.resolve(__dirname, &#x27;dist&#x27;),\n    filename: &#x27;[name].[contenthash].js&#x27;\n  }\n}\n</code></pre><p>对于那些新的缓存破坏：任何时候我说 <code>main.js</code>，我实际上是指 <code>main.xMePWxHo.js</code>，其中里面的字符串是文件内容的散列。这意味着不同的文件名 当应用程序中的代码发生更改时，从而强制浏览器下载新文件。</p>\n<p>每周当我们对站点进行一些新的更改时，这个包的 <code>contenthash</code> 都会发生变化。因此，Alice 每周都要访问我们的站点并下载一个新的 <code>400kb</code> 文件。</p>\n<p>如果我们把这些事件做成一张表格，它会是这样的。</p>\n<p><img src=\"https://image.fundebug.com/2019-03-03-01.png\" alt></p>\n<p>也就是10周内， 4.12 MB, 我们可以做得更好。</p>\n<h3>分解 vendor 包</h3>\n<p>让我们将包分成 <code>main.js</code> 和 <code>vendor.js</code> 文件。</p>\n<pre class=\"prettyprint language-javascript\"><code> &#x2F;&#x2F; webpack.config.js \n\nconst path = require(&#x27;path&#x27;)\n\nmodule.exports = {\n  entry: path.resolve(__dirname, &#x27;src&#x2F;index.js&#x27;),\n  output: {\n    path: path.resolve(__dirname, &#x27;dist&#x27;),\n    filename: &#x27;[name].[contenthash].js&#x27;,\n  },\n  optimization: {\n    splitChunks: {\n      chunks: &#x27;all&#x27;\n    }\n  }\n}\n</code></pre><p>Webpack4 为你做最好的事情，而没有告诉你想要如何拆分包。这导致我们对 webpack 是如何分包的知之甚少，结果有人会问 “你到底在对我的包裹做什么？”</p>\n<p>添加 <code>optimization.splitChunks.chunks ='all'</code>的一种说法是 “将 <code>node_modules</code> 中的所有内容放入名为 <code>vendors~main.js</code> 的文件中”。</p>\n<p>有了这个基本的 bundle splitting，Alice 每次访问时仍然下载一个新的 200kb 的 <code>main.js</code>，但是在第一周、第8周和第5周只下载 200kb 的 <code>vendor.js</code> (不是按此顺序)。</p>\n<p><img src=\"https://image.fundebug.com/2019-03-03-02.png\" alt></p>\n<p>总共：<strong>2.64 MB</strong>。</p>\n<p>减少36％。 在我们的配置中添加五行代码并不错。 在进一步阅读之前，先去做。 如果你需要从 Webpack 3 升级到 4，请不要担心，它非常简单。</p>\n<p>我认为这种性能改进似乎更抽象，因为它是在10周内进行的，但是它确实为忠实用户减少了36%的字节，我们应该为自己感到自豪。</p>\n<p>但我们可以做得更好。</p>\n<h3>分离每个 npm 包</h3>\n<p>我们的 <code>vendor.js</code> 遇到了与我们的 <code>main.js</code> 文件相同的问题——对其中一部分的更改意味着重新下载它的所有部分。</p>\n<p>那么为什么不为每 个npm 包创建一个单独的文件呢?这很容易做到。</p>\n<p>所以把 <code>react</code>、<code>lodash</code>、<code>redux</code>、<code>moment</code> 等拆分成不同的文件:</p>\n<pre class=\"prettyprint language-javascript\"><code>const path = require(&#x27;path&#x27;);\nconst webpack = require(&#x27;webpack&#x27;);\n\nmodule.exports = {\n  entry: path.resolve(__dirname, &#x27;src&#x2F;index.js&#x27;),\n  plugins: [\n    new webpack.HashedModuleIdsPlugin(), &#x2F;&#x2F; so that file hashes don&#x27;t change unexpectedly\n  ],\n  output: {\n    path: path.resolve(__dirname, &#x27;dist&#x27;),\n    filename: &#x27;[name].[contenthash].js&#x27;,\n  },\n  optimization: {\n    runtimeChunk: &#x27;single&#x27;,\n    splitChunks: {\n      chunks: &#x27;all&#x27;,\n      maxInitialRequests: Infinity,\n      minSize: 0,\n      cacheGroups: {\n        vendor: {\n          test: &#x2F;[\\\\&#x2F;]node_modules[\\\\&#x2F;]&#x2F;,\n          name(module) {\n            &#x2F;&#x2F; get the name. E.g. node_modules&#x2F;packageName&#x2F;not&#x2F;this&#x2F;part.js\n            &#x2F;&#x2F; or node_modules&#x2F;packageName\n            const packageName = module.context.match(&#x2F;[\\\\&#x2F;]node_modules[\\\\&#x2F;](.*?)([\\\\&#x2F;]|$)&#x2F;)[1];\n\n            &#x2F;&#x2F; npm package names are URL-safe, but some servers don&#x27;t like @ symbols\n            return &#96;npm.${packageName.replace(&#x27;@&#x27;, &#x27;&#x27;)}&#96;;\n          },\n        },\n      },\n    },\n  },\n};\n</code></pre><p><a href=\"https://webpack.js.org/guides/caching/\">文档</a>将很好地解释这里的大部分内容，但是我将稍微解释一下需要注意的部分，因为它们花了我太多的时间。</p>\n<ul>\n<li>Webpack 有一些不太聪明的默认设置，比如分割输出文件时最多3个文件，最小文件大小为30 KB（所有较小的文件将连接在一起），所以我重写了这些。</li>\n<li><code>cacheGroups</code> 是我们定义 Webpack 应该如何将数据块分组到输出文件中的规则的地方。这里有一个名为 “vendor” 的模块，它将用于从 <code>node_modules</code> 加载的任何模块。通常，你只需将输出文件的名称定义为字符串。但是我将 <code>name</code>定义为一个函数(将为每个解析的文件调用这个函数)。然后从模块的路径返回包的名称。因此，我们将为每个包获得一个文件，例如 <code>npm.react-dom.899sadfhj4.js</code>。</li>\n<li><a href=\"https://docs.npmjs.com/files/package.json#name\">NPM 包名称必须是 URL 安全的才能发布</a>，因此我们不需要 <code>encodeURI</code> 的 <code>packageName</code>。 但是，我遇到一个.NET服务器不能提供名称中带有 <code>@</code>(来自一个限定范围的包)的文件，所以我在这个代码片段中替换了 <code>@</code>。</li>\n<li>整个设置很棒，因为它是一成不变的。 无需维护 - 不需要按名称引用任何包。</li>\n</ul>\n<p>Alice 仍然会每周重新下载 200 KB 的 <code>main.js</code> 文件，并且在第一次访问时仍会下载 200 KB 的npm包，但她绝不会两次下载相同的包。</p>\n<p><img src=\"https://image.fundebug.com/2019-03-03-03.png\" alt></p>\n<p>总共： <strong>2.24 MB.</strong></p>\n<p>与基线相比减少了44%，这对于一些可以从博客文章中复制/粘贴的代码来说非常酷。</p>\n<p>我想知道是否有可能超过 50% ? 这完全没有问题。</p>\n<p><strong>代码部署后可能存在的BUG没法实时知道，事后为了解决这些BUG，花了大量的时间进行log 调试，这边顺便给大家推荐一个好用的BUG监控工具<a href=\"https://www.fundebug.com/?utm_source=xiaozhi\">Fundebug</a>。</strong></p>\n<h3>分离应用程序代码的区域</h3>\n<p>让我们转到 main.js 文件，可怜的 Alice 一次又一次地下载这个文件。</p>\n<p>我之前提到过，我们在此站点上有两个不同的部分：产品列表和产品详细信息页面。 每个区域中的唯一代码为25 KB（共享代码为150 KB）。</p>\n<p>我们的产品详情页面现在变化不大，因为我们做得太完美了。 因此，如果我们将其做为单独的文件，则可以在大多数时间从缓存中获取到它。</p>\n<p>另外，我们网站有一个较大的内联SVG文件用于渲染图标，重量只有25 KB，而这个也是很少变化的， 我们也需要优化它。</p>\n<p>我们只需手动添加一些入口点，告诉 Webpack 为每个项创建一个文件。</p>\n<pre class=\"prettyprint language-javascript\"><code>module.exports = {\n  entry: {\n    main: path.resolve(__dirname, &#x27;src&#x2F;index.js&#x27;),\n    ProductList: path.resolve(__dirname, &#x27;src&#x2F;ProductList&#x2F;ProductList.js&#x27;),\n    ProductPage: path.resolve(__dirname, &#x27;src&#x2F;ProductPage&#x2F;ProductPage.js&#x27;),\n    Icon: path.resolve(__dirname, &#x27;src&#x2F;Icon&#x2F;Icon.js&#x27;),\n  },\n  output: {\n    path: path.resolve(__dirname, &#x27;dist&#x27;),\n    filename: &#x27;[name].[contenthash:8].js&#x27;,\n  },\n  plugins: [\n    new webpack.HashedModuleIdsPlugin(), &#x2F;&#x2F; so that file hashes don&#x27;t change unexpectedly\n  ],\n  optimization: {\n    runtimeChunk: &#x27;single&#x27;,\n    splitChunks: {\n      chunks: &#x27;all&#x27;,\n      maxInitialRequests: Infinity,\n      minSize: 0,\n      cacheGroups: {\n        vendor: {\n          test: &#x2F;[\\\\&#x2F;]node_modules[\\\\&#x2F;]&#x2F;,\n          name(module) {\n            &#x2F;&#x2F; get the name. E.g. node_modules&#x2F;packageName&#x2F;not&#x2F;this&#x2F;part.js\n            &#x2F;&#x2F; or node_modules&#x2F;packageName\n            const packageName = module.context.match(&#x2F;[\\\\&#x2F;]node_modules[\\\\&#x2F;](.*?)([\\\\&#x2F;]|$)&#x2F;)[1];\n\n            &#x2F;&#x2F; npm package names are URL-safe, but some servers don&#x27;t like @ symbols\n            return &#96;npm.${packageName.replace(&#x27;@&#x27;, &#x27;&#x27;)}&#96;;\n          },\n        },\n      },\n    },\n  },\n};\n</code></pre><p>Webpack 还会为 <code>ProductList</code> 和 <code>ProductPage</code> 之间共享的内容创建文件，这样我们就不会得到重复的代码。</p>\n<p>这将为 Alice 在大多数情况下节省 50 KB 的下载。</p>\n<p><img src=\"https://image.fundebug.com/2019-03-03-04.png\" alt></p>\n<p>只有 <strong>1.815 MB!</strong></p>\n<p>我们已经为 Alice 节省了高达56％的下载量，这种节省将（在我们的理论场景中）持续到时间结束。</p>\n<p>所有这些都只在Webpack配置中进行了更改——我们没有对应用程序代码进行任何更改。</p>\n<p>我在前面提到过，测试中的确切场景并不重要。这是因为，无论你提出什么场景，结论都是一样的:将应用程序分割成合理的小文件，以便用户下载更少的代码。</p>\n<p>很快，=将讨论“code splitting”——另一种类型的文件分割——但首先我想解决你现在正在考虑的三个问题。</p>\n<p><strong>#1：大量的网络请求不是更慢吗?</strong></p>\n<p>答案当然是<strong>不会</strong>。</p>\n<p>在 HTTP/1.1 时代，这曾经是一种情况，但在 HTTP/2 时代就不是这样了。</p>\n<p>尽管如此，<a href=\"https://medium.com/%5B@asyncmax%5D(/user/asyncmax)/the-right-way-to-bundle-your-assets-for-faster-sites-over-http-2-437c37efe3ff\">这篇2016年的文章</a> 和 <a href=\"http://engineering.khanacademy.org/posts/js-packaging-http2.htm\">Khan Academy 2015年的文章</a>都得出结论，即使使用 HTTP/2，下载太多的文件还是比较慢。但在这两篇文章中，“太多”的意思都是“几百个”。所以请记住，如果你有数百个文件，你可能一开始就会遇到并发限制。</p>\n<p>如果您想知道，对 HTTP/2 的支持可以追溯到 Windows 10 上的 ie11。我做了一个详尽的调查，每个人都使用比那更旧的设置，他们一致向我保证，他们不在乎网站加载有多快。</p>\n<p><strong>#2:每个webpack包中没有 开销/引用 代码吗?</strong></p>\n<p>是的，这也是真的。</p>\n<p>好吧,狗屎:</p>\n<ul>\n<li>more files = 更多 Webpack 引用</li>\n<li>more files = 不压缩</li>\n</ul>\n<p>让我们量化一下，这样我们就能确切地知道需要担心多少。</p>\n<p>好的，我刚做了一个测试，一个 190 KB 的站点拆分成 19 个文件，增加了大约 2％发送到浏览器的总字节数。</p>\n<p>因此…在第一次访问时增加 2％，在每次访问之前减少60％直到网站下架。</p>\n<p>正确的担忧是:完全没有。</p>\n<p>当我测试1个文件对19个时，我想我会在一些不同的网络上试一试，包括HTTP / 1.1</p>\n<p><img src=\"https://image.fundebug.com/2019-03-03-05.png\" alt></p>\n<p>在 3G 和4G上，这个站点在有19个文件的情况下加载时间减少了30%。</p>\n<p>这是非常杂乱的数据。 例如，在运行2号 的 4G 上，站点加载时间为 646ms，然后运行两次之后，加载时间为1116ms，比之前长73%，没有变化。因此，声称 HTTP/2 “快30%” 似乎有点鬼鬼祟祟。</p>\n<p>我创建这个表是为了尝试量化 HTTP/2 所带来的差异，但实际上我唯一能说的是“它可能没有显著的差异”。</p>\n<p>真正令人吃惊的是最后两行。那是旧的 Windows 和 HTTP/1.1，我打赌会慢得多,我想我需把网速调慢一点。</p>\n<p>我从微软的网站上下载了一个Windows 7 虚拟机来测试这些东西。它是 IE8 自带的，我想把它升级到IE9，所以我转到微软的IE9下载页面…</p>\n<p><img src=\"https://image.fundebug.com/2019-03-03-06.png\" alt=\"06\">关于HTTP/2 的最后一个问题，你知道它现在已经内置到 Node中了吗?如果你想体验一下，我编写了<a href=\"https://gist.github.com/davidgilbertson/e5690c04e06c4882cf5761f8acff36ec\">一个带有gzip、brotli和响应缓存的小型100行HTTP/2服务器</a>点击预览，以满足你的测试乐趣。</p>\n<p>这就是我要讲的关于 bundle splitting 的所有内容。我认为这种方法唯一的缺点是必须不断地说服人们加载大量的小文件是可以的。</p>\n<h3>Code splitting (加载你需要的代码)</h3>\n<p>我说，这种特殊的方法只有在某些网站上才有意义。</p>\n<p>我喜欢应用我刚刚编造的 20/20 规则:如果你的站点的某个部分只有 20% 的用户访问，并且它大于站点的 JavaScript 的 20%，那么你应该按需加载该代码。</p>\n<h4>如何决定?</h4>\n<p>假设你有一个购物网站，想知道是否应该将“checkout”的代码分开，因为只有30%的访问者才会访问那里。</p>\n<p>首先要做的是卖更好的东西。</p>\n<p>第二件事是弄清楚多少代码对于结账功能是完全独立的。 由于在执行“code splitting” 之前应始终先“bundle splitting’ ”，因此你可能已经知道代码的这一部分有多大。</p>\n<p>它可能比你想象的要小，所以在你太兴奋之前做一下加法。例如，如果你有一个 React 站点，那么你的 <code>store</code>、<code>reducer</code>、<code>routing</code>、<code>actions</code> 等都将在整个站点上共享。唯一的部分将主要是组件和它们的帮助类。</p>\n<p>因此，你注意到你的结帐页面完全独特的代码是 <code>7KB</code>。 该网站的其余部分是 <code>300 KB</code>。 我会看着这个，然后说，我不打算把它拆分，原因如下:</p>\n<ul>\n<li>\n<p>提前加载不会变慢。记住，你是在并行加载所有这些文件。查看是否可以记录 <code>300KB</code> 和 <code>307KB</code> 之间的加载时间差异。</p>\n</li>\n<li>\n<p>如果你稍后加载此代码，则用户必须在单击“TAKE MY MONEY”之后等待该文件 - 你希望延迟的最小的时间。</p>\n</li>\n<li>\n<p>Code splitting 需要更改应用程序代码。 它引入了异步逻辑，以前只有同步逻辑。 这不是火箭科学，但我认为应该通过可感知的用户体验改进来证明其复杂性。</p>\n</li>\n</ul>\n<p>让我们看两个 code splitting 的例子。</p>\n<h3>Polyfills</h3>\n<p>我将从这个开始，因为它适用于大多数站点，并且是一个很好的简单介绍。</p>\n<p>我在我的网站上使用了一些奇特的功能，所以我有一个文件可以导入我需要的所有polyfill， 它包括以下八行：</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x2F;&#x2F; polyfills.js \nrequire(&#x27;whatwg-fetch&#x27;);\nrequire(&#x27;intl&#x27;);\nrequire(&#x27;url-polyfill&#x27;);\nrequire(&#x27;core-js&#x2F;web&#x2F;dom-collections&#x27;);\nrequire(&#x27;core-js&#x2F;es6&#x2F;map&#x27;);\nrequire(&#x27;core-js&#x2F;es6&#x2F;string&#x27;);\nrequire(&#x27;core-js&#x2F;es6&#x2F;array&#x27;);\nrequire(&#x27;core-js&#x2F;es6&#x2F;object&#x27;);\n</code></pre><p>在 <code>index.js</code> 中导入这个文件。</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x2F;&#x2F; index-always-poly.js\nimport &#x27;.&#x2F;polyfills&#x27;;\nimport React from &#x27;react&#x27;;\nimport ReactDOM from &#x27;react-dom&#x27;;\nimport App from &#x27;.&#x2F;App&#x2F;App&#x27;;\nimport &#x27;.&#x2F;index.css&#x27;;\n\nconst render = () =&gt; {\n  ReactDOM.render(&lt;App &#x2F;&gt;, document.getElementById(&#x27;root&#x27;));\n}\n\nrender(); &#x2F;&#x2F; yes I am pointless, for now\n</code></pre><p>使用 bundle splitting 的 Webpack 配置，我的 polyfills 将自动拆分为四个不同的文件，因为这里有四个 npm 包。 它们总共大约 25 KB，并且 90％ 的浏览器不需要它们，因此值得动态加载它们。</p>\n<p>使用 Webpack 4 和 <code>import()</code> 语法（不要与 <code>import</code> 语法混淆），有条件地加载polyfill 非常容易。</p>\n<pre class=\"prettyprint language-javascript\"><code>import React from &#x27;react&#x27;;\nimport ReactDOM from &#x27;react-dom&#x27;;\nimport App from &#x27;.&#x2F;App&#x2F;App&#x27;;\nimport &#x27;.&#x2F;index.css&#x27;;\n\nconst render = () =&gt; {\n  ReactDOM.render(&lt;App &#x2F;&gt;, document.getElementById(&#x27;root&#x27;));\n}\n\nif (\n  &#x27;fetch&#x27; in window &amp;&amp;\n  &#x27;Intl&#x27; in window &amp;&amp;\n  &#x27;URL&#x27; in window &amp;&amp;\n  &#x27;Map&#x27; in window &amp;&amp;\n  &#x27;forEach&#x27; in NodeList.prototype &amp;&amp;\n  &#x27;startsWith&#x27; in String.prototype &amp;&amp;\n  &#x27;endsWith&#x27; in String.prototype &amp;&amp;\n  &#x27;includes&#x27; in String.prototype &amp;&amp;\n  &#x27;includes&#x27; in Array.prototype &amp;&amp;\n  &#x27;assign&#x27; in Object &amp;&amp;\n  &#x27;entries&#x27; in Object &amp;&amp;\n  &#x27;keys&#x27; in Object\n) {\n  render();\n} else {\n  import(&#x27;.&#x2F;polyfills&#x27;).then(render);\n}\n</code></pre><p>合理？ 如果支持所有这些内容，则渲染页面。 否则，导入 polyfill 然后渲染页面。 当这个代码在浏览器中运行时，Webpack 的运行时将处理这四个 npm 包的加载，当它们被下载和解析时，将调用 <code>render()</code> 并继续进行。</p>\n<p>顺便说一句，要使用 <code>import()</code>，你需要 <a href=\"https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import/\">Babel 的动态导入插件</a>。另外，正如 Webpack 文档解释的那样，<a href=\"https://webpack.js.org/guides/code-splitting/#dynamic-imports\">import() 使用 promises</a>，所以你需要将其与其他polyfill分开填充。</p>\n<h3>基于路由的动态加载（特定于React）</h3>\n<p>回到 Alice 的例子，假设站点现在有一个“管理”部分，产品的销售者可以登录并管理他们所销售的一些没用的记录。</p>\n<p>本节有许多精彩的特性、大量的图表和来自 npm 的大型图表库。因为我已经在做 bundle splittin 了，我可以看到这些都是超过 100 KB 的阴影。</p>\n<p>目前，我有一个路由设置，当用户查看 <code>/admin</code> URL时，它将渲染 <code>&lt;AdminPage&gt;</code>。当Webpack 打包所有东西时，它会找到 <code>import AdminPage from './AdminPage.js'</code>。然后说&quot;嘿，我需要在初始负载中包含这个&quot;</p>\n<p>但我们不希望这样，我们需要将这个引用放到一个动态导入的管理页面中，比如<code>import('./AdminPage.js')</code> ，这样 Webpack 就知道动态加载它。</p>\n<p>它非常酷，不需要配置。</p>\n<p>因此，不必直接引用 <code>AdminPage</code>，我可以创建另一个组件，当用户访问 <code>/admin</code> URL时将渲染该组件，它可能是这样的:</p>\n<pre class=\"prettyprint language-javascript\"><code>&#x2F;&#x2F; AdminPageLoader.js \nimport React from &#x27;react&#x27;;\n\nclass AdminPageLoader extends React.PureComponent {\n  constructor(props) {\n    super(props);\n\n    this.state = {\n      AdminPage: null,\n    }\n  }\n\n  componentDidMount() {\n    import(&#x27;.&#x2F;AdminPage&#x27;).then(module =&gt; {\n      this.setState({ AdminPage: module.default });\n    });\n  }\n\n  render() {\n    const { AdminPage } = this.state;\n\n    return AdminPage\n      ? &lt;AdminPage {...this.props} &#x2F;&gt;\n      : &lt;div&gt;Loading...&lt;&#x2F;div&gt;;\n  }\n}\n\nexport default AdminPageLoader;\n</code></pre><p>这个概念很简单，对吧? 当这个组件挂载时(意味着用户位于 <code>/admin</code> URL)，我们将动态加载 <code>./AdminPage.js</code>，然后在状态中保存对该组件的引用。</p>\n<p>在 <code>render</code> 方法中，我们只是在等待 <code>&lt;AdminPage&gt;</code> 加载时渲染 <code>&lt;div&gt;Loading...&lt;/div&gt;</code>，或者在加载并存储状态时渲染 <code>&lt;AdminPage&gt;</code>。</p>\n<p>我想自己做这个只是为了好玩，但是在现实世界中，你只需要使用 <code>react-loadable</code> ，如关于 <a href=\"https://reactjs.org/docs/code-splitting.html\">code-splitting 的React文档</a>中所述。</p>\n<h3>总结</h3>\n<p>对于上面总结以下两点：</p>\n<ul>\n<li>如果有人不止一次访问你的网站，把你的代码分成许多小文件。</li>\n<li>如果你的站点有大部分用户不访问的部分，则动态加载该代码。</li>\n</ul>\n<p><strong>原文：</strong> <a href=\"https://hackernoon.com/the-100-correct-way-to-split-your-chunks-with-webpack-f8a9df5b7758\">The 100% correct way to split your chunks with Webpack</a></p>\n<h3>关于Fundebug</h3>\n<p><a href=\"https://www.fundebug.com/\">Fundebug</a>专注于JavaScript、微信小程序、微信小游戏、支付宝小程序、React Native、Node.js和Java线上应用实时BUG监控。 自从2016年双十一正式上线，Fundebug累计处理了10亿+错误事件，付费客户有Google、360、金山软件、百姓网等众多品牌企业。欢迎大家<a href=\"https://www.fundebug.com/team/create\">免费试用</a>！</p>\n</div>",
+            "title": "Web 性能优化： 使用 Webpack 分离数据的正确方法",
+            "last_reply_at": "2019-03-04T07:33:57.097Z",
+            "good": true,
+            "top": false,
+            "reply_count": 1,
+            "visit_count": 274,
+            "create_at": "2019-03-04T02:18:36.451Z",
+            "author": {
+                "loginname": "Fundebug",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/26496557?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7cc3275b8cb21491ca59b9",
+            "author_id": "5c1c411f76c4964062a1c0e3",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>继 PC 版 <a href=\"https://www.frontendjs.com/\">前站导航</a> 网站，对应的微信小程序版也发布了，微信搜索 <strong>i前站导航</strong> 即可浏览。</p>\n<p>目前可以在手机端浏览各个社区、文档网址，动态趣图，代码秀等模块，后续还有更多功能开放。</p>\n<p>希望大家多多提出宝贵意见 ^.^\n<img src=\"http://images.frontendjs.com/ad-mini-app.jpg\" alt=\"小程序\"></p>\n</div>",
+            "title": "前站小程序发布",
+            "last_reply_at": "2019-03-04T06:18:15.222Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 218,
+            "create_at": "2019-03-04T06:18:15.222Z",
+            "author": {
+                "loginname": "bestvist",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/22828569?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c2edce13898674067a7b103",
+            "author_id": "5372465f3c72496d41009adc",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>截止1 月 12日晚 22:00，有效参与人数共 252 人，抽取 5 名中奖者。\n恭喜以下中奖者🎉🎉🎉🎉🎉 gofromzero,MoeXian,yxcs,caoxiaoshuai1,langjy🎉🎉🎉🎉🎉\n请评论区留下联系方式。\n<img src=\"//static.cnodejs.org/Fvx9s9EjQk7IwNrAMO5_y7zJfrej\" alt=\"image.png\"></p>\n<p>---------------- 以下是原文 ----------------</p>\n<p>新书《Node.js开发实战》热卖，大获好评，感谢大家的支持，送几本书回馈给大家。</p>\n<p>赠书办法：</p>\n<ul>\n<li>只须在本贴留言即可。</li>\n<li>从回贴评论者中随机抽取中奖者，共计 5 本，每位中奖者 1 本。</li>\n<li>获赠名单公布在本帖，并在本贴下评论 @ 每位获赠的同学。</li>\n<li>截止时间 2019 年 1 月 12 日 22:00:00 （ UTC+8 ），以评论时间为准。</li>\n<li>由于本站不支持私信，请获奖同学在本帖回复联系方式，邮箱或者任何其它能联系到你的形式。</li>\n<li>开奖后 72 小时未能回复联系方式者视为放弃。</li>\n</ul>\n<p>试读样章：<a href=\"https://pan.baidu.com/s/1x3c35AmJV4rcEj_W3A1WGg\">https://pan.baidu.com/s/1x3c35AmJV4rcEj_W3A1WGg</a>\n京东有售：<a href=\"https://item.jd.com/12460185.html\">https://item.jd.com/12460185.html</a>\n<img src=\"//static.cnodejs.org/Finp2H7di-Equ_yMWsjJY6hxYGkh\" alt=\"WechatIMG148 copy.jpg\"></p>\n</div>",
+            "title": "送几本《Node.js开发实战》",
+            "last_reply_at": "2019-03-04T05:52:06.663Z",
+            "good": false,
+            "top": false,
+            "reply_count": 354,
+            "visit_count": 10586,
+            "create_at": "2019-01-04T04:11:13.570Z",
+            "author": {
+                "loginname": "meikidd",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/376338?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c74a05fab86b86ddf6b2ceb",
+            "author_id": "5928e4609e32cc84569a7431",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><h2>前言</h2>\n<p>一年前我花了个把月的时间仓促地写了个vue全家桶+koa+sokoet.io+mysql的应用来当做我的毕业设计—<a href=\"https://github.com/aermin/vue-chat\">vue-chat</a>，目前在github获得359个star，不过感觉代码实现太糙了，推荐看<a href=\"https://github.com/aermin/react-chat\">新写的这个</a>😂。</p>\n<p>毕业后我入职的公司用的是react技术栈，而且公司恰好是一个做通信应用相关的公司，所以萌生了下班业余时间用react技术栈重写一遍的想法。相比vue-chat,这个历时更长(大半年来利用空余时间不断重构迭代)，完成度相对更高，性能和代码质量相对更好（当然还有不少todo的优化空间），不再是只要求功能能跑就好了，而是不断的重构重写，也有了产品定位，而不是像vue-chat那样一味的模仿QQ和微信。</p>\n<h2>正文</h2>\n<h1>ghChat(react版)</h1>\n<p>之所以叫ghChat，是想着以后做一些GitHub的集成，希望让这个即时通讯工具成为chat tool for github.</p>\n<p>目前只支持github授权登录，和展示github用户公开的信息。</p>\n<h3>项目展示：</h3>\n<p>github对gif图有限制，我就直接截图了，具体详情建议直接<a href=\"https://im.aermin.top\">线上体验</a>。<strong><em>可以的话给个star支持一下</em></strong> 😄</p>\n<p><img src=\"https://user-images.githubusercontent.com/24861316/53351929-e1d33300-395c-11e9-84a9-0a9fd793b5a1.png\" alt=\"image\"></p>\n<p><img src=\"https://user-images.githubusercontent.com/24861316/53295822-b3f7cc80-383e-11e9-83b4-82a12bd4a24f.png\" alt=\"image\"></p>\n<p><img src=\"https://user-images.githubusercontent.com/24861316/53296063-eb687800-3842-11e9-9da3-ab1c312c673d.png\" alt=\"image\"></p>\n<p><img src=\"https://user-images.githubusercontent.com/24861316/53296160-afcead80-3844-11e9-9827-4b03303fcd3d.png\" alt=\"image\"></p>\n<p><img src=\"https://user-images.githubusercontent.com/24861316/53351432-4346d200-395c-11e9-936e-e08d887f1355.png\" alt=\"image\"></p>\n<h3>地址</h3>\n<p><a href=\"https://github.com/aermin/react-chat\">github项目地址</a>。<code>慷慨地给个star呀~</code></p>\n<p><a href=\"https://im.aermin.top\">网站线上地址，支持直接github授权登录</a>。</p>\n<p>欢迎加入 “ghChat项目交流群” 这个群交流呀，可搜索群名(不用全打)加入，也可点击机器人的邀请加入(如下图)</p>\n<p><img src=\"https://user-images.githubusercontent.com/24861316/53296199-6337a200-3845-11e9-8435-3f5480cca602.png\" alt=\"image\"></p>\n<h3>技术栈</h3>\n<p>前端React全家桶，后端node.js(koa2), 数据库MySQL, <a href=\"http://xn--SocKet-he0jn1y0ra0619b.io\">双向通信SocKet.io</a>, jwt鉴权等等。具体看package.json哦。</p>\n<h3>本地跑项目</h3>\n<ol>\n<li>项目拉到本地</li>\n</ol>\n<pre class=\"prettyprint\"><code>git clone https:&#x2F;&#x2F;github.com&#x2F;aermin&#x2F;react-chat.git\n</code></pre><ol>\n<li>在react-chat文件夹下创建一个secret.js的空白文件。</li>\n</ol>\n<p>如果要使用github授权登录，使用七牛云cdn，生产环境数据库和jwt的secret的单独配置，就要填充相应的配置了。</p>\n<pre class=\"prettyprint\"><code>module.exports = {\n  client_secret: &#x27;&#x27;, &#x2F;&#x2F; github授权登录需要的  github-&gt; settings -&gt;  Developer settings 那边生成获取\n  db: {\n    host: &#x27;&#x27;, &#x2F;&#x2F; 数据库IP\n    port: , &#x2F;&#x2F; 数据库端口\n    database: &#x27;&#x27;, &#x2F;&#x2F; 数据库名称\n    user: &#x27;&#x27;, &#x2F;&#x2F; 数据库用户名\n    password: &#x27;&#x27;, &#x2F;&#x2F; 数据库密码\n  },\n  secretValue: &#x27;&#x27;, &#x2F;&#x2F; json web token 的 secret\n  qiniu: { &#x2F;&#x2F; 七牛云配置\n    accessKey: &#x27;&#x27;,\n    secretKey: &#x27;&#x27;,\n    bucket: &#x27;&#x27;\n  }\n};\n</code></pre><ol>\n<li>下载前端的npm包</li>\n</ol>\n<pre class=\"prettyprint\"><code>cd react-chat\n</code></pre><pre class=\"prettyprint\"><code>npm i\n</code></pre><ol>\n<li>下载后端的npm包</li>\n</ol>\n<pre class=\"prettyprint\"><code>cd cd react-chat&#x2F;server \n</code></pre><pre class=\"prettyprint\"><code>npm i\n</code></pre><ol>\n<li>初始化数据库</li>\n</ol>\n<pre class=\"prettyprint\"><code>&#x2F;&#x2F;需要先在本地建一个名为ghchat的mysql数据库\n配置如下看react-chat&#x2F;server&#x2F;config.js\n\nnpm run init_sql    &#x2F;&#x2F;然后查看下数据库是否init成功\n</code></pre><ol>\n<li>跑起前端后后端的代码</li>\n</ol>\n<pre class=\"prettyprint\"><code>npm run start\n</code></pre><pre class=\"prettyprint\"><code>cd ..      &#x2F;&#x2F; 返回到react-chat&#x2F;目录\n</code></pre><pre class=\"prettyprint\"><code>npm run start\n</code></pre><p>ps: 本地发图片和发文件和github登录无法使用，需要自己去github和七牛云申请一些东西</p>\n<h3>文档</h3>\n<p>这边开坑了一篇<a href=\"https://github.com/aermin/blog/issues/60\">ghChat开发历程</a> ，将不断地更新总结做这个全栈项目时会遇到的问题，知识点，和坑。</p>\n<h3>目前进度</h3>\n<ul>\n<li>\n<p>账户</p>\n<ul>\n<li>[x] 登录</li>\n<li>[x] 注册</li>\n<li>[x] 支持github授权登录</li>\n<li>[x] 退出登录</li>\n</ul>\n</li>\n<li>\n<p>UI</p>\n<ul>\n<li>[x] 弹窗，提示等基础组件</li>\n<li>[x] 响应式布局。以前的实现只是移动端的布局。</li>\n</ul>\n</li>\n<li>\n<p>私聊</p>\n<ul>\n<li>[x] 私聊（外加重要的重构）：始化时请求聊天列表所有聊天对象的聊天记录（后期将请求聊天记录的限制为20条聊天内容，避免初始化时间过长），接着根据点击列表导致chatId(取自url params)的改变，重新渲染新的聊天内容。以前vue-chat的实现方式是点击进入每个聊天页面都会发1至多次请求然后渲染页面，性能较差</li>\n<li>[x] 添加联系人: 搜索到该用户并发送信息后即记录为好友(关系存DB)，会展示在双方的聊天列表</li>\n<li>[x] 好友资料展示</li>\n<li>[ ] 删除联系人</li>\n</ul>\n</li>\n<li>\n<p>群聊</p>\n<ul>\n<li>[x] 群聊 &amp;&amp; 重构： 本来是根据消息列表上的群和好友去遍历发HTTP请求拿数据，现在直接在后端整合好一次性用websocket发过来，减少请求次数且websocket在此情况性能更优一些； 完成群聊功能</li>\n<li>[x] 建群</li>\n<li>[x] 加群：搜索到该群并点击，会看到当前时间前的聊天记录，点加入按钮后即成功加入群(关系存DB)，开始受到群消息的广播，并且群会展示在聊天列表</li>\n<li>[x] 群资料展示</li>\n<li>[x] 退群：退群后聊天列表不再展示该群(DB中删除该关系)</li>\n<li>[ ] 编辑群资料</li>\n</ul>\n</li>\n<li>\n<p>查询</p>\n<ul>\n<li>[x] 用户搜索&amp;&amp;群搜索： 支持前端模糊搜索和后端模糊搜索</li>\n<li>[ ] 支持聊天记录查询</li>\n</ul>\n</li>\n<li>\n<p>丰富聊天方式</p>\n<ul>\n<li>[x] 聊天页表： 实时按时间降序展示联系过的人和加入的群</li>\n<li>[x] 发图</li>\n<li>[x] 发表情</li>\n<li>[x] 发文件</li>\n<li>[x] 下载文件</li>\n<li>[x] Enter快捷键发送信息,发送按钮灰亮</li>\n<li>[ ] @某人</li>\n<li>[ ] 图片放大查看</li>\n<li>[ ] 提供在线表情库</li>\n<li>[ ] 支持Markdown</li>\n<li>[ ] 支持Quote</li>\n</ul>\n</li>\n<li>\n<p>新消息提示</p>\n<ul>\n<li>[x] 浏览器桌面通知（生产环境下，使用chrome的桌面通知需要你的网站是HTTPS的）</li>\n<li>[x] 列表未读数字提示</li>\n</ul>\n</li>\n<li>\n<p>不断的重构和性能优化</p>\n<ul>\n<li>[x] gzip 压缩</li>\n<li>[x] 聊天内容懒加载，每次获取20条数据</li>\n<li>[ ] sql优化</li>\n</ul>\n</li>\n<li>\n<p>其他</p>\n<ul>\n<li>[x] 机器人智能聊天回复</li>\n<li>[x] 部署SSL证书</li>\n<li>[ ] 支持PWA</li>\n<li>[ ] 后端用TS重写，封装成sdk</li>\n<li>[ ] CI/CD</li>\n</ul>\n</li>\n</ul>\n</div>",
+            "title": "Koa2+React/Vue全家桶+Socket.io+MySQL，用心地写个聊天应用",
+            "last_reply_at": "2019-03-04T05:36:18.549Z",
+            "good": false,
+            "top": false,
+            "reply_count": 13,
+            "visit_count": 1042,
+            "create_at": "2019-02-26T02:11:43.731Z",
+            "author": {
+                "loginname": "aermin",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/24861316?v=4&s=120"
+            }
+        },
+        {
+            "id": "5b1939ad29e6e510415b2916",
+            "author_id": "5ad9731bba60fcc66b7b86aa",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>最近利用空闲时间写了一个从入门到上线的的node实战教程《Node.js从入门到上线》A blog build with Koa2. 目前还在更新中，入门篇已基本成型。</p>\n<p>本项目使用es6语法，采用Koa2 + mongoose 搭建了一个博客系统，实现了文章管理、用户登录注册、权限控制、分类管理等功能。</p>\n<p>GitHub: <a href=\"https://github.com/liuxing/node-blog\">https://github.com/liuxing/node-blog</a></p>\n<h2>目录</h2>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.1Node.js%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md\">1.1  Node.js 的安装与配置</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.1Node.js%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md#%E5%AE%89%E8%A3%85nodejs\">安装Node.js</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.1Node.js%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md#%E4%BD%BF%E7%94%A8-nvm\">使用nvm</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.1Node.js%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md#%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7\">一些有用的工具</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.1Node.js%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE.md#hello-node\">hello-node</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.2Node.js%E5%9F%BA%E7%A1%80%E6%A6%82%E8%A7%88.md\">1.2 Node.js 基础概览</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.2Node.js%E5%9F%BA%E7%A1%80%E6%A6%82%E8%A7%88.md#node%E6%A8%A1%E5%9D%97\">node模块</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/1.2Node.js%E5%9F%BA%E7%A1%80%E6%A6%82%E8%A7%88.md#npm%E6%A8%A1%E5%9D%97%E7%AE%A1%E7%90%86%E5%99%A8\">npm包管理器</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/2.1Koa2%E5%88%9D%E4%BD%93%E9%AA%8C.md\">2.1 Koa2初体验</a></p>\n<ul>\n<li>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/2.1Koa2%E5%88%9D%E4%BD%93%E9%AA%8C.md#hello-koa2\">Hello Koa2</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/2.1Koa2%E5%88%9D%E4%BD%93%E9%AA%8C.md#%E4%BD%BF%E7%94%A8supervisor-%E6%88%96%E8%80%85-nodemon\">使用supervisor 或者 nodemon</a></p>\n</li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/2.2MongoDB%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.md\">2.2 MongoDB的安装及使用</a></p>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.1%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md\">3.1 开发前的项目配置</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.1%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md#%E8%A7%84%E5%88%92%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84\">规划项目目录结构</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.1%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md#%E4%BD%BF%E7%94%A8editorconfig\">使用editorconfig</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.1%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md#%E4%BD%BF%E7%94%A8commitizen\">使用commitizen</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.1%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md#%E4%BD%BF%E7%94%A8eslint\">使用eslint</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.1%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md#%E4%BD%BF%E7%94%A8git-hooks%E8%87%AA%E5%8A%A8%E6%A3%80%E6%9F%A5%E4%BB%A3%E7%A0%81\">使用Git hooks自动检查代码</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.2%E6%8A%8A%E9%A1%B9%E7%9B%AE%E8%B7%91%E8%B5%B7%E6%9D%A5.md\">3.2 把项目跑起来</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.2%E6%8A%8A%E9%A1%B9%E7%9B%AE%E8%B7%91%E8%B5%B7%E6%9D%A5.md#router\">router</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.2%E6%8A%8A%E9%A1%B9%E7%9B%AE%E8%B7%91%E8%B5%B7%E6%9D%A5.md#%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E\">配置模板引擎</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.2%E6%8A%8A%E9%A1%B9%E7%9B%AE%E8%B7%91%E8%B5%B7%E6%9D%A5.md#%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90\">配置静态资源</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.3%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93.md\">3.3 使用mongoose操作数据库</a></p>\n<ul>\n<li>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.3%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93.md#%E8%AE%BE%E8%AE%A1schema\">设计Schema</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/liuxing/abc-blog/tree/master/docs/3.3%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93.md#%E4%BD%BF%E7%94%A8model\">使用model</a></p>\n</li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.4%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%99%BB%E5%BD%95.md\">3.4用户注册与登录</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.4%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%99%BB%E5%BD%95.md#cookie%E4%B8%8Esession\">cookie与session</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.4%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%99%BB%E5%BD%95.md#%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C\">用户注册</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.4%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%99%BB%E5%BD%95.md#%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95\">用户登录</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.4%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%99%BB%E5%BD%95.md#%E7%94%A8%E6%88%B7%E7%99%BB%E5%87%BA\">用户登出</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.5koa2%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%BC%80%E5%8F%91.md\">3.5 koa2中间件开发</a></p>\n<ul>\n<li>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.5koa2%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%BC%80%E5%8F%91.md#koa2-%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%9C%BA%E5%88%B6\">koa2 中间件机制</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.5koa2%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%BC%80%E5%8F%91.md#%E6%B6%88%E6%81%AF%E9%97%AA%E7%8E%B0%E4%B8%AD%E9%97%B4%E4%BB%B6\">消息闪现中间件</a></p>\n</li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.6%E6%96%87%E7%AB%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.md\">3.6 文章增删改查</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.6%E6%96%87%E7%AB%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.md#%E6%96%87%E7%AB%A0%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1\">文章模型设计</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.6%E6%96%87%E7%AB%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.md#%E6%96%87%E7%AB%A0%E5%8F%91%E8%A1%A8\">文章发表</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.6%E6%96%87%E7%AB%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.md#%E6%96%87%E7%AB%A0%E5%88%97%E8%A1%A8%E4%B8%8E%E8%AF%A6%E6%83%85\">文章列表与详情</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.6%E6%96%87%E7%AB%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.md#%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91%E4%B8%8E%E5%88%A0%E9%99%A4\">文章编辑与删除</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.7%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6.md\">3.7 用户权限控制</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.7%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6.md#%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E6%A3%80%E6%9F%A5\">登录状态检查</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.7%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6.md#%E7%AE%A1%E7%90%86%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6\">管理权限控制</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.8%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.md\">3.8 评论功能</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.8%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.md#%E8%AE%BE%E8%AE%A1%E8%AF%84%E8%AE%BA%E7%9A%84%E6%A8%A1%E5%9E%8B\">设计评论的模型</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.8%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.md#%E5%8F%91%E5%B8%83%E7%95%99%E8%A8%80\">发布留言</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.8%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.md#%E5%8F%91%E5%B8%83%E7%95%99%E8%A8%80\">显示留言</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.8%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.md#%E5%88%A0%E9%99%A4%E7%95%99%E8%A8%80\">删除留言</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.9%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98.md\">3.9 一些安全问题</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.9%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98.md#xss%E7%9A%84%E9%98%B2%E8%8C%83\">XSS的防范</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.9%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98.md#csrf-%E7%9A%84%E9%98%B2%E8%8C%83\">CSRF的防范</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.10%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB.md\">3.10 分类管理</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.10%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB.md#%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1\">分类模型</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.10%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB.md#%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86%E4%B8%BB%E9%A1%B5\">分类管理主页</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.10%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB.md#%E6%96%B0%E5%A2%9E%E5%88%86%E7%B1%BB\">新增与删除</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.11%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD.md\">3.11 分页功能</a></p>\n<ul>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.11%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD.md#mongodb-%E5%AE%9E%E7%8E%B0%E5%88%86%E9%A1%B5%E5%8E%9F%E7%90%86\">MongoDB分页原理</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.11%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD.md#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%88%86%E9%A1%B5%E5%99%A8\">实现一个基本的分页器</a></li>\n<li><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.11%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD.md#%E9%AB%98%E7%BA%A7%E4%B8%80%E7%82%B9%E5%84%BF%E7%9A%84%E5%88%86%E9%A1%B5%E5%99%A8\">高级一点儿的分页器</a></li>\n</ul>\n<p><a href=\"https://github.com/liuxing/abc-blog/blob/master/docs/3.12koa2%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%8F%8A404.md\">3.12 koa2错误处理及404</a></p>\n<p>[3.13 单元测试 更新中]</p>\n<p>关于测试：大家喜欢什么框架 mocha or jest？\n…</p>\n<p>持续更新中，未来将逐步发布【上线篇】：域名服务器选购、服务器配置、Nginx等等。实现线上部署</p>\n<p><img src=\"https://user-gold-cdn.xitu.io/2018/3/12/1621826e0dd7f41a?w=642&amp;h=382&amp;f=webp&amp;s=12738\" alt></p>\n<p>左手代码右手砖抛砖引玉</p>\n</div>",
+            "title": "《Node.js从入门到上线》入门篇 （持续更新中）",
+            "last_reply_at": "2019-03-04T03:04:57.616Z",
+            "good": false,
+            "top": false,
+            "reply_count": 49,
+            "visit_count": 12416,
+            "create_at": "2018-06-07T13:57:01.654Z",
+            "author": {
+                "loginname": "liuxing",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/17724186?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c79e1385b8cb21491ca5175",
+            "author_id": "5bf3cec8e6481c5709f5d871",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>打包路径设置\n<img src=\"//static.cnodejs.org/Fr3Ot0LCxezCeARtqBQUnS5RC0gp\" alt=\"image.png\">\n页面显示\n<img src=\"//static.cnodejs.org/FqFgXdBsLCo0oGw4lOZF1kank3AD\" alt=\"image.png\">\n资源加载信息\n<img src=\"//static.cnodejs.org/FovbG2sQdLL2_S9BcVNVpUXWrN9c\" alt=\"image.png\">\n报错信息\n<img src=\"//static.cnodejs.org/FqjY2DUPGB-GV7Fn4NJSBr-gxMJ7\" alt=\"image.png\"></p>\n<p>求帮忙！</p>\n</div>",
+            "title": "vue打包路径问题，根目录在打包dist上一级",
+            "last_reply_at": "2019-03-04T02:52:43.634Z",
+            "good": false,
+            "top": false,
+            "reply_count": 1,
+            "visit_count": 342,
+            "create_at": "2019-03-02T01:49:44.673Z",
+            "author": {
+                "loginname": "tzbcf",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/25059314?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7c92595b8cb21491ca5732",
+            "author_id": "566192ec28d9d1ba58c3a319",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>请教下大家个问题：在客户端访问量稍大的时候，在发送上传图片的base64请求时，偶尔会发生服务端有给响应，但是客户端收不到网络超时的情况，客户端超时已经设置30s了，请问在客户端h5页面和服务端中可以怎样进一步优化这个问题呢？\nnginx的允许请求体大小已经设置成10M了。\nh5页面是vue单页面+axios发送请求\n还可以在哪方面做些改善呢？请高手们指点迷津下哈！</p>\n</div>",
+            "title": "h5页面客户端网络异常，但服务端有正常响应",
+            "last_reply_at": "2019-03-04T02:50:01.398Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 167,
+            "create_at": "2019-03-04T02:50:01.398Z",
+            "author": {
+                "loginname": "jiangliqin",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/12250847?v=4&s=120"
+            }
+        },
+        {
+            "id": "5a9cf82f77dc4e0d2136ae0b",
+            "author_id": "595d976b10d696af07768a24",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><h1>express搭建的淘宝客网站</h1>\n<blockquote>\n<p>测试地址: <a href=\"http://www.5aiss.com\">www.5aiss.com</a></p>\n</blockquote>\n<blockquote>\n<p>项目地址：<a href=\"https://gitee.com/null_639_7345/taobaoke\">https://gitee.com/null_639_7345/taobaoke</a></p>\n</blockquote>\n<h2>效果</h2>\n<p><img src=\"//static.cnodejs.org/FhODBX0aEYv9S_vHNMupGOJMyLiK\" alt=\"1.png\">\n<img src=\"//static.cnodejs.org/FnOFioCtmxAAwd-Hp6NavqrRpaV2\" alt=\"2.png\">\n<img src=\"//static.cnodejs.org/FpsOnYTFTJo1tdbBuahPTb1MUjFm\" alt=\"3.png\">\n<img src=\"//static.cnodejs.org/FgvpMq9M5kIyt7Qg0gAlvSxIXcnt\" alt=\"4.png\"></p>\n<h2>1.运行</h2>\n<ul>\n<li>安装mongodb数据库</li>\n<li>修改配置文件config/default.js</li>\n<li>配置淘宝api信息\n\\taobaoke\\server\\tbk\\TbkAPI.js</li>\n</ul>\n<pre class=\"prettyprint language-js\"><code>var client = new TopClient({\n  appkey: &quot;***&quot;,&#x2F;&#x2F;你的appkey\n  appsecret: &quot;***&quot;,&#x2F;&#x2F;appsecret\n  REST_URL: &quot;http:&#x2F;&#x2F;gw.api.taobao.com&#x2F;router&#x2F;rest&quot;\n});\n\nlet api = (module.exports = {\n  adzone_id: &quot;***&quot;,&#x2F;&#x2F;你的adzone_id\n  fields:&#x27;num_iid,title,pict_url,small_images,reserve_price,zk_final_price,user_type,provcity,item_url&#x27;\n});\n\n</code></pre><blockquote>\n<p>不清楚的请参考-book/淘宝客API使用方法.doc</p>\n</blockquote>\n<ul>\n<li>安装依赖库</li>\n</ul>\n<pre class=\"prettyprint language-sh\"><code>npm i gulp -g\nnpm i\n</code></pre><ul>\n<li>前端打包</li>\n</ul>\n<pre class=\"prettyprint language-sh\"><code>gulp\n</code></pre><ul>\n<li>启动web服务</li>\n</ul>\n<pre class=\"prettyprint language-sh\"><code>node .&#x2F;bin&#x2F;www\n</code></pre></div>",
+            "title": "express搭建的淘宝客网站",
+            "last_reply_at": "2019-03-03T17:29:04.227Z",
+            "good": false,
+            "top": false,
+            "reply_count": 2,
+            "visit_count": 1890,
+            "create_at": "2018-03-05T07:56:31.091Z",
+            "author": {
+                "loginname": "18820227745",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/25097125?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c22034c3898674067a783fc",
+            "author_id": "5b52cbf1fb9e84ec69cc1ca2",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>Vscode编辑器用中Angular7提示工具下载量马上达到750万，这意味这说什么？</p>\n<p>说实话Angular7.x相比React vue有更快的编译速度、更快的运行速度。难道王者归来。</p>\n<p><strong>Angular7入门视频教程网盘免费下</strong>：   <a href=\"https://pan.baidu.com/s/1dTItz3tEnP0GxPcExfH68g\">https://pan.baidu.com/s/1dTItz3tEnP0GxPcExfH68g</a></p>\n<p><img src=\"//static.cnodejs.org/Fp_oe68CGoTo4J8Vbpcqc_dVAFhQ\" alt=\"1.png\"></p>\n</div>",
+            "title": "Vscode编辑器中Angular7提示工具下载量达到750万 -这意味着什么？ 王者归来来吗？",
+            "last_reply_at": "2019-03-03T17:27:58.932Z",
+            "good": false,
+            "top": false,
+            "reply_count": 25,
+            "visit_count": 2459,
+            "create_at": "2018-12-25T10:15:40.046Z",
+            "author": {
+                "loginname": "nodeper",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/41500847?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c53a1a605cc322e7b136c9e",
+            "author_id": "57fef4a9fdf3bd3d6511858f",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>mysql小白请教个问题\n如何使用egg-sequelize做如下查找</p>\n<p>数据有一条字段是数组(字符串逗号分隔)</p>\n<p>查找条件是一个数组，比如’a,b,c’</p>\n<p>如何查找数据里带查找条件的数据，只要求是或的逻辑，a,b,c包含一个即可</p>\n</div>",
+            "title": "使用sequelize如何做数组包含查找",
+            "last_reply_at": "2019-03-03T17:24:42.366Z",
+            "good": false,
+            "top": false,
+            "reply_count": 7,
+            "visit_count": 915,
+            "create_at": "2019-02-01T01:32:22.903Z",
+            "author": {
+                "loginname": "IEfucker",
+                "avatar_url": "https://avatars0.githubusercontent.com/u/3446876?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c18d6837ec239239ff582b8",
+            "author_id": "5c179fa17ec239239ff57b8f",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>请大神们推荐几本教材啊</p>\n</div>",
+            "title": "想学node.js, 有什么教材推荐吗",
+            "last_reply_at": "2019-03-03T17:23:20.772Z",
+            "good": false,
+            "top": false,
+            "reply_count": 16,
+            "visit_count": 1464,
+            "create_at": "2018-12-18T11:14:11.553Z",
+            "author": {
+                "loginname": "sxuni",
+                "avatar_url": "https://avatars2.githubusercontent.com/u/16433603?v=4&s=120"
+            }
+        },
+        {
+            "id": "5b630389b71aedfe4c1266a2",
+            "author_id": "5b62fab258db3ccf66a4516b",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>近期在学习node.js，由于自己是初学者，看了《Node.js开发指南》和 《Node.js开发实战》上的一些基础的东西，《深入浅出 Node.js》看起来是很吃力，最近试着用Express开发自己的一个 个人博客系统，刚刚开始，就感觉很吃力，最近就在想该怎么来学习，希望曾经和我有相同问题的朋友解答下我的疑惑，学习路线很迷茫啊。。。</p>\n</div>",
+            "title": "node.js的入门（萌新）",
+            "last_reply_at": "2019-03-03T13:56:36.120Z",
+            "good": false,
+            "top": false,
+            "reply_count": 37,
+            "visit_count": 4836,
+            "create_at": "2018-08-02T13:13:45.110Z",
+            "author": {
+                "loginname": "remembergf",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/34055216?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c793b525b8cb21491ca50ce",
+            "author_id": "58bcce197872ea0864fee3d5",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>想看东宫，但是没开会员，不知道怎么免费看，打开控制台审查元素时，video标签的src属性值是blob:<a href=\"https://v.youku.com/7981f421-64e0-48fa-87b6-e3a161c116fd%E3%80%82%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%E5%91%80%EF%BC%9F\">https://v.youku.com/7981f421-64e0-48fa-87b6-e3a161c116fd。这是什么意思呀？</a></p>\n</div>",
+            "title": "有人知道怎么破解vip视频免费看吗？",
+            "last_reply_at": "2019-03-03T12:26:26.727Z",
+            "good": false,
+            "top": false,
+            "reply_count": 5,
+            "visit_count": 492,
+            "create_at": "2019-03-01T14:01:54.723Z",
+            "author": {
+                "loginname": "dreamsline",
+                "avatar_url": "https://avatars3.githubusercontent.com/u/20219371?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c7bac1d90c14711cc8c9bda",
+            "author_id": "56efaf9802c237a73a1a89a2",
+            "tab": "ask",
+            "content": "<div class=\"markdown-text\"><p>我再npm下载nproxy作为代理服务器，设置了网页代理服务器后，其他的网站都能代理访问都能经过代理，只有localhost和127.0.0.1不经过代理，把localhost更改为局域网ip访问后又经过代理了，什么原因？代理监控的是网卡吗？localhost不经过网卡所以监控不带无法做代理吗？那么如果对localhost做代理呢？</p>\n</div>",
+            "title": "网页代理服务器，为什么不能代理localhost呢",
+            "last_reply_at": "2019-03-03T10:27:41.518Z",
+            "good": false,
+            "top": false,
+            "reply_count": 0,
+            "visit_count": 268,
+            "create_at": "2019-03-03T10:27:41.518Z",
+            "author": {
+                "loginname": "lyt308012546",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/10969445?v=4&s=120"
+            }
+        },
+        {
+            "id": "5c769cd4ab86b86ddf6b387a",
+            "author_id": "5a0dbddde2f4b8ea224964b6",
+            "tab": "share",
+            "content": "<div class=\"markdown-text\"><p>最近平时有空了也学习学习Node.js，在codejs平台也有一些不错的教程，同时也发现平台有提供开放的 <a href=\"https://cnodejs.org/api\">API</a> 给开发者们。平时工作主要做小程序，于是乎就想运用cnode平台提供的API来做一个下程序客户端。</p>\n<p>之前也有尝试过写过，不过感觉体验很不好，这次重新弄了一个新的，界面干净了很多，资讯嘛还是以内容为主。希望能够帮助到大家，共同学习共同进步。写的比较仓促，样式参考、数据请求处理，差不多用了1天的时间。目前只用到了<strong>get /topics 主题首页</strong> 和 <strong>get /topic/:id 主题详情</strong>。也就是列表和详情页，后续也会陆续更新，不断完善。微信扫码体验一下：</p>\n<p><img src=\"//static.cnodejs.org/Fjd6d5yI8pZ4SPqliGmhUzjRIuW2\" alt=\"gh_26ff2b7c5db7_258.jpg\"></p>\n<p>该微信小程序的开发没有使用第三方框架，直接使用的是微信小程序原生的方式来开发的。参考文档为微信小程序官方开发文档，第一版(v1.0.01)主要的功能点：</p>\n<ul>\n<li>\n<p>首页</p>\n<ol>\n<li>列表展示</li>\n<li>类别切换（点击分类可选择全部分类、精华、问答、招聘）</li>\n<li>点击右上角将当前类别列表分享给好友</li>\n<li>下拉刷新、上拉加载</li>\n</ol>\n</li>\n<li>\n<p>详情页</p>\n<ol>\n<li>内容展示</li>\n<li>用户回复列表</li>\n<li>分享好友。 详情页的分享路径用户打开有个重定向的过程，这样可以保证被分享者打开后可以返回到首页列表。</li>\n</ol>\n</li>\n</ul>\n<p>后续也会慢慢优化和改善相关的体验，同时也慢慢添加一些新的功能点，不多学习和完善。</p>\n<p>免责申明： 此小程序为业余以学习为目的开发，不属于官方小程序客户端。如有相关问题请告知开发者，联系方式：</p>\n<p>微信:  <a href=\"#\">aoxiaoqiang001</a></p>\n<p>Email:  <a href=\"mailto:aoxiaoqiang@163.com\">aoxiaoqiang@163.com</a></p>\n</div>",
+            "title": "CNode 社区微信小程序客户端",
+            "last_reply_at": "2019-03-03T07:27:26.831Z",
+            "good": false,
+            "top": false,
+            "reply_count": 6,
+            "visit_count": 597,
+            "create_at": "2019-02-27T14:21:08.196Z",
+            "author": {
+                "loginname": "aoxiaoqiang",
+                "avatar_url": "https://avatars1.githubusercontent.com/u/17998436?v=4&s=120"
+            }
+        }
+    ]
+}

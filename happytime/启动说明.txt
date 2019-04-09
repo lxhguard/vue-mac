@@ -1,0 +1,10 @@
+1.client : npm run dev
+
+2.server: npm start
+修改端口号直接在www里面修改，而不是app.js,还可以直接在终端。
+
+3.连接数据库mongoose    端口：27019
+cd  /usr/local/Cellar/mongodb/4.0.3_1//bin
+mongod --dbpath=/Users/wanggonggege/Desktop/vue/happytime/server/myserver/db --port=27019
+
+在vscode终端手动输入:npm install mongoose --save-dev
